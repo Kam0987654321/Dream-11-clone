@@ -1,0 +1,841 @@
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+<ScrollView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:id="@+id/profileheader">
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:scaleType="centerCrop"
+            android:id="@+id/im_profileback"
+            android:src="@drawable/bg"
+            />
+    </RelativeLayout>
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/im_profilepic"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        app:civ_border_width="0dp"
+        android:src="@drawable/bats_hvr"
+        android:visibility="visible"
+
+        android:layout_below="@+id/profileheader"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="-55dp"
+        app:civ_border_color="#efefef"/>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/im_profilepic"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:id="@+id/LL_UserName"
+        android:orientation="horizontal">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Your Username"
+            android:textSize="16sp"
+            android:textColor="#626262"
+            android:layout_gravity="center_vertical"
+            android:padding="10dp"
+            android:id="@+id/tv_ProfileUserName"/>
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:padding="10dp"
+            android:visibility="gone"
+            android:id="@+id/im_EditIcon"
+            android:src="@drawable/edit_icon"/>
+
+    </LinearLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/LL_UserName"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:id="@+id/RL_LevelDetails"
+        android:background="@drawable/edittext_back">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:orientation="vertical">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="To progress to a Level 5 Champion"
+            android:layout_gravity="center"
+            android:padding="5dp"
+            android:textSize="15sp"
+            android:textColor="@color/sixtwo"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:orientation="horizontal"
+            android:weightSum="2">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:layout_weight="1">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Play for"
+                android:textSize="14sp"
+                android:textColor="@color/sixtwo"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="₹1"
+                android:textSize="20sp"
+                android:textColor="@color/colorPrimary"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="more"
+                android:textSize="14sp"
+                android:textColor="@color/sixtwo"/>
+
+            </LinearLayout>
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:src="@drawable/or_divider"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:layout_weight="1">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Join"
+                    android:textSize="14sp"
+                    android:textColor="@color/sixtwo"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="1"
+                    android:textSize="20sp"
+                    android:textColor="@color/colorPrimary"
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="more cash contest"
+                    android:textSize="14sp"
+                    android:textColor="@color/sixtwo"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/sixtwo"
+            android:layout_marginRight="20dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="20dp"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Unlock this reward at level 10 "
+            android:layout_gravity="center"
+            android:padding="5dp"
+            android:textSize="15sp"
+            android:layout_marginTop="10dp"
+            android:textColor="@color/sixtwo"/>
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/reward_re10"
+            android:layout_gravity="center"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="20dp"/>
+
+
+    </LinearLayout>
+    </RelativeLayout>
+
+    <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/RL_LevelDetails"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:id="@+id/RL_ProfilePlayingHistory"
+            android:background="@drawable/edittext_back">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Playing History"
+                    android:layout_gravity="center"
+                    android:padding="5dp"
+                    android:textStyle="bold"
+                    android:textSize="15sp"
+                    android:layout_marginTop="10dp"
+                    android:textColor="#1e1e1e"/>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:orientation="horizontal"
+                    android:weightSum="2">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_gravity="center"
+                        android:layout_margin="10dp"
+                        android:gravity="center"
+                        android:layout_weight="1">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+
+                            android:src="@drawable/contests"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="0"
+                            android:id="@+id/tv_JoinedContest"
+                            android:textSize="20sp"
+                            android:padding="3dp"
+                            android:textColor="#1f1f1f"
+                            />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Contests"
+                            android:padding="3dp"
+                            android:textSize="14sp"
+                            android:textColor="@color/sixtwo"/>
+
+                    </LinearLayout>
+                    <View
+                        android:layout_width="1dp"
+                        android:layout_height="match_parent"
+                        android:background="@color/sixtwo"/>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_gravity="center"
+                        android:layout_margin="10dp"
+                        android:gravity="center"
+                        android:layout_weight="1">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+
+                            android:src="@drawable/matches"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="0"
+                            android:id="@+id/tv_JoinedMatches"
+                            android:textSize="20sp"
+                            android:padding="3dp"
+                            android:textColor="#1f1f1f"
+                            />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Matches"
+                            android:padding="3dp"
+                            android:tint="@color/gray"
+                            android:textSize="14sp"
+                            android:textColor="@color/sixtwo"/>
+                    </LinearLayout>
+
+                </LinearLayout>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/sixtwo"
+                    android:tint="@color/gray"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginLeft="20dp"
+                    />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="20dp"
+                    android:orientation="horizontal"
+                    android:weightSum="2">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:layout_margin="10dp"
+                        android:layout_weight="1">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+
+                            android:src="@drawable/series"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="0"
+                            android:id="@+id/tv_JoinedSeries"
+                            android:textSize="20sp"
+                            android:padding="3dp"
+                            android:textColor="#1f1f1f"
+                            />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Series"
+                            android:padding="3dp"
+                            android:textSize="14sp"
+                            android:textColor="@color/sixtwo"/>
+
+                    </LinearLayout>
+                    <View
+                        android:layout_width="1dp"
+                        android:layout_height="match_parent"
+                        android:background="@color/sixtwo"/>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_gravity="center"
+                        android:layout_margin="10dp"
+                        android:gravity="center"
+                        android:layout_weight="1">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+
+                            android:src="@drawable/wins"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="0"
+                            android:id="@+id/tv_Wins"
+                            android:textSize="20sp"
+                            android:padding="3dp"
+                            android:textColor="#1f1f1f"
+                            />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Wins"
+                            android:padding="3dp"
+                            android:textSize="14sp"
+                            android:textColor="@color/sixtwo"/>
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+        </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/RL_ProfilePlayingHistory"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:id="@+id/RL_ProfileRanking"
+        android:background="@drawable/edittext_back">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/LL_GlobalRanking"
+            android:orientation="vertical">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Ranking"
+            android:layout_centerHorizontal="true"
+            android:textAlignment="center"
+            android:padding="5dp"
+            android:textStyle="bold"
+            android:textSize="15sp"
+            android:layout_marginTop="10dp"
+            android:drawableRight="@drawable/arrow_icon_mr"
+            android:drawablePadding="5dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginLeft="10dp"
+            android:textColor="#1e1e1e"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginBottom="20dp"
+            android:orientation="horizontal">
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+
+            android:src="@drawable/ranking"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_gravity="center"
+            android:orientation="vertical">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="View your global ranking."
+            android:layout_centerHorizontal="true"
+            android:textStyle="bold"
+            android:textSize="14sp"
+            android:textColor="#1e1e1e"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Join contests to see your rank."
+            android:layout_centerHorizontal="true"
+            android:textSize="12sp"
+            android:textColor="@color/sixtwo"/>
+
+        </LinearLayout>
+
+        </LinearLayout>
+
+        </LinearLayout>
+    </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/RL_ProfileRanking"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:id="@+id/RL_ProfileFriends"
+            android:background="@drawable/edittext_back">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Friends"
+                    android:layout_centerHorizontal="true"
+                    android:textAlignment="center"
+                    android:padding="5dp"
+                    android:id="@+id/tv_MyFriendsList"
+                    android:textStyle="bold"
+                    android:textSize="15sp"
+                    android:layout_marginTop="10dp"
+                    android:drawableRight="@drawable/arrow_icon_mr"
+                    android:drawablePadding="5dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:textColor="#1e1e1e"/>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginBottom="20dp"
+                    android:orientation="horizontal">
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+
+                        android:src="@drawable/friends"/>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_gravity="center"
+                        android:orientation="vertical">
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Earn bonus by inviting you friends."
+                            android:layout_centerHorizontal="true"
+                            android:textStyle="bold"
+                            android:textSize="14sp"
+
+                            android:textColor="#1e1e1e"/>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="The more friends you invite, the more you both earn."
+                            android:layout_centerHorizontal="true"
+                            android:textSize="12sp"
+                            android:textColor="@color/sixtwo"/>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+             <TextView
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:text="INVITE FRIENDS &amp; GET ₹100"
+                 android:padding="10dp"
+                 android:id="@+id/tv_InviteFriends"
+                 android:layout_marginTop="10dp"
+                 android:textSize="12sp"
+                 android:background="@drawable/dark_rectangle"
+                 android:textColor="@color/white"
+                 android:layout_gravity="center"
+                 android:layout_marginBottom="20dp"
+                 />
+
+
+            </LinearLayout>
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/RL_ProfileFriends"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:visibility="gone"
+            android:id="@+id/RL_ProfileRewards"
+            android:background="@drawable/edittext_back">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                android:orientation="vertical">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Rewards"
+                    android:layout_centerHorizontal="true"
+                    android:textAlignment="center"
+                    android:padding="5dp"
+                    android:textStyle="bold"
+                    android:textSize="15sp"
+                    android:layout_marginTop="10dp"
+                    android:drawableRight="@drawable/arrow_icon_mr"
+                    android:drawablePadding="5dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:textColor="#1e1e1e"/>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginBottom="20dp"
+                    android:orientation="horizontal">
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:src="@drawable/reward_icon"/>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_gravity="center"
+                        android:orientation="vertical">
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="No rewards earned yet."
+                            android:layout_centerHorizontal="true"
+                            android:textStyle="bold"
+                            android:textSize="14sp"
+                            android:textColor="#1e1e1e"/>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="The more you play, the more rewards you get. Join contest to be a campion."
+                            android:layout_centerHorizontal="true"
+                            android:textSize="12sp"
+                            android:textColor="@color/sixtwo"/>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+        </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/RL_ProfileRewards"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:id="@+id/RL_ProfileAccount"
+        android:background="@drawable/edittext_back">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Account"
+                android:layout_centerHorizontal="true"
+                android:textAlignment="center"
+                android:padding="5dp"
+                android:textStyle="bold"
+                android:textSize="15sp"
+                android:layout_marginTop="10dp"
+                android:id="@+id/tv_ProfileAccount"
+                android:drawableRight="@drawable/arrow_icon_mr"
+                android:drawablePadding="5dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginLeft="10dp"
+                android:textColor="#1e1e1e"/>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginTop="20dp"
+                    >
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="₹ 0"
+                        android:id="@+id/tv_ProfileDeposited"
+                        android:textStyle="bold"
+                        android:textSize="14sp"
+                        android:textColor="#1e1e1e"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Deposited"
+                        android:layout_below="@+id/tv_ProfileDeposited"
+                        android:textSize="12sp"
+                        android:textColor="@color/sixtwo"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Add Balance"
+                        android:textSize="10sp"
+                        android:id="@+id/tv_ProfileAddBalance"
+                        android:layout_centerVertical="true"
+                        android:layout_alignParentRight="true"
+                        android:background="@drawable/roundbutton_back"
+                        android:paddingTop="5dp"
+                        android:paddingBottom="5dp"
+                        android:paddingLeft="20dp"
+                        android:paddingRight="20dp"
+                        android:textColor="@color/black"
+                        />
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="20dp"
+
+                >
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="₹ 0"
+                    android:id="@+id/tv_ProfileWinning"
+                    android:textStyle="bold"
+                    android:textSize="14sp"
+                    android:textColor="#1e1e1e"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Winnings"
+                    android:layout_below="@+id/tv_ProfileWinning"
+                    android:textSize="12sp"
+                    android:textColor="@color/sixtwo"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Withdrawl"
+                    android:textSize="10sp"
+                    android:visibility="invisible"
+                    android:id="@+id/tv_ProfileWithdrawl"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentRight="true"
+                    android:background="@drawable/roundbutton_back"
+                    android:paddingTop="5dp"
+                    android:paddingBottom="5dp"
+                    android:paddingLeft="20dp"
+                    android:paddingRight="20dp"
+                    android:textColor="@color/black"
+                    />
+            </RelativeLayout>
+          <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="20dp"
+            >
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="₹ 0"
+                android:id="@+id/tv_ProfileBonus"
+                android:textStyle="bold"
+                android:textSize="14sp"
+                android:textColor="#1e1e1e"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Bonus"
+                android:layout_below="@+id/tv_ProfileBonus"
+                android:textSize="12sp"
+                android:textColor="@color/sixtwo"/>
+
+        </RelativeLayout>
+
+        </LinearLayout>
+    </RelativeLayout>
+
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/RL_ProfileAccount"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="10dp"
+        android:visibility="visible"
+        android:layout_marginRight="10dp"
+        android:id="@+id/RL_ProfilePersonalDetail"
+        android:background="@drawable/edittext_back">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Personal Details"
+            android:textColor="#1e1e1e"
+            android:padding="5dp"
+            android:textStyle="bold"
+            android:textSize="15sp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="10dp"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Full Profile"
+            android:id="@+id/tv_ProfileView"
+            android:textColor="@color/colorPrimary"
+            android:padding="5dp"
+            android:textStyle="bold"
+            android:textSize="15sp"
+            android:layout_marginRight="10dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="10dp"
+            android:drawableRight="@drawable/arrow_icon_mr"
+            android:drawablePadding="10dp"
+            />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_below="@+id/tv_ProfileView"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginLeft="20dp">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="yourmail@gmail.com"
+            android:id="@+id/tv_ProfileYourMail"
+            android:padding="10dp"
+            android:textSize="15sp"
+            android:textColor="@color/sixtwo"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Change Password"
+            android:padding="10dp"
+            android:layout_marginTop="10dp"
+            android:textSize="13sp"
+            android:id="@+id/tv_ProfileChangePassword"
+            android:background="@drawable/dark_rectangle"
+
+            android:textColor="@color/white"
+            android:drawableLeft="@drawable/change_pass_icon"
+            android:drawablePadding="10dp"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Logout"
+            android:id="@+id/tv_ProfileLogout"
+            android:padding="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="20dp"
+            android:textSize="13sp"
+            android:background="@drawable/dark_rectangle"
+
+            android:textColor="@color/white"
+            android:drawableLeft="@drawable/logout_icon"
+            android:drawablePadding="10dp"/>
+
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+
+    </RelativeLayout>
+</ScrollView>
+</RelativeLayout>

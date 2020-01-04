@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <TextView
+        android:id="@+id/tv_PlayerRole"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Player Role"
+        android:padding="10dp"
+        android:textColor="@android:color/darker_gray"
+        android:textSize="14sp" />
+
+    <!--  recycler view for items -->
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/RV_MainList"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/tv_PlayerRole"
+        android:layout_marginTop="7dp" />
+</RelativeLayout>

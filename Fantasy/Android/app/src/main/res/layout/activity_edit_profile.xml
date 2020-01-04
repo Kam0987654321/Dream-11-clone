@@ -1,0 +1,281 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    >
+
+    <include
+        layout="@layout/activity_mainheader"
+        android:id="@+id/head"/>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/head">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:layout_marginRight="20dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="10dp">
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/input_editName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:hintEnabled="false"
+                >
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/et_EditName"
+                    android:hint="Name"
+                    android:singleLine="true"
+                    android:textSize="14sp"
+                    android:textColorHint="#626262"
+                    android:layout_centerHorizontal="true"
+                    android:background="@drawable/edittext_back"
+                    android:padding="12dp" />
+            </android.support.design.widget.TextInputLayout>
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/input_editEmail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                app:hintEnabled="false"
+                >
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/et_EditEmail"
+                    android:hint="Email"
+                    android:singleLine="true"
+                    android:textSize="14sp"
+                    android:textColorHint="#626262"
+                    android:layout_centerHorizontal="true"
+                    android:background="@drawable/edittext_back"
+                    android:padding="12dp" />
+            </android.support.design.widget.TextInputLayout>
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/input_editMobile"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                app:hintEnabled="false"
+                >
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/et_EditMobile"
+                    android:hint="Mobile Number"
+                    android:singleLine="true"
+                    android:inputType="number"
+                    android:textSize="14sp"
+                    android:textColorHint="#626262"
+                    android:layout_centerHorizontal="true"
+                    android:background="@drawable/edittext_back"
+                    android:padding="12dp" />
+            </android.support.design.widget.TextInputLayout>
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/input_editDob"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                app:hintEnabled="false"
+                >
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/et_EditDob"
+                    android:hint="Dob"
+                    android:focusable="false"
+                    android:editable="false"
+                    android:singleLine="true"
+                    android:textSize="14sp"
+                    android:textColorHint="#626262"
+                    android:layout_centerHorizontal="true"
+                    android:background="@drawable/edittext_back"
+                    android:padding="12dp" />
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/input_editAddress"
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:hintEnabled="false"
+                >
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/et_EditAddress"
+                    android:hint="Address"
+                    android:singleLine="true"
+                    android:textSize="14sp"
+                    android:textColorHint="#626262"
+                    android:layout_centerHorizontal="true"
+                    android:background="@drawable/edittext_back"
+                    android:padding="12dp" />
+            </android.support.design.widget.TextInputLayout>
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/input_editCity"
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:hintEnabled="false"
+                >
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/et_EditCity"
+                    android:hint="City"
+                    android:singleLine="true"
+                    android:textSize="14sp"
+                    android:textColorHint="#626262"
+                    android:layout_centerHorizontal="true"
+                    android:background="@drawable/edittext_back"
+                    android:padding="12dp" />
+            </android.support.design.widget.TextInputLayout>
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/input_editPincode"
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:hintEnabled="false"
+                >
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/et_EditPincode"
+                    android:hint="Pincode"
+                    android:singleLine="true"
+                    android:textSize="14sp"
+                    android:inputType="number"
+                    android:textColorHint="#626262"
+                    android:layout_centerHorizontal="true"
+                    android:background="@drawable/edittext_back"
+                    android:padding="12dp" />
+            </android.support.design.widget.TextInputLayout>
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/input_editState"
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:hintEnabled="false"
+                >
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/et_EditState"
+                    android:hint="State"
+                    android:singleLine="true"
+                    android:textSize="14sp"
+                    android:textColorHint="#626262"
+                    android:layout_centerHorizontal="true"
+                    android:background="@drawable/edittext_back"
+                    android:padding="12dp" />
+            </android.support.design.widget.TextInputLayout>
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/input_editCountry"
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:hintEnabled="false"
+                >
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/et_EditCountry"
+                    android:hint="Country"
+                    android:singleLine="true"
+                    android:textSize="14sp"
+                    android:textColorHint="#626262"
+                    android:layout_centerHorizontal="true"
+                    android:background="@drawable/edittext_back"
+                    android:padding="12dp" />
+            </android.support.design.widget.TextInputLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:weightSum="2"
+            android:orientation="horizontal">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Male"
+            android:id="@+id/tv_EditMale"
+            android:layout_weight="1"
+            android:paddingBottom="10dp"
+            android:paddingTop="10dp"
+            android:background="@drawable/white_rectangle"
+            android:padding="10dp"
+            android:gravity="center"
+            android:layout_marginRight="5dp"
+            />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Female"
+            android:id="@+id/tv_EditFeMale"
+            android:paddingBottom="10dp"
+            android:paddingTop="10dp"
+            android:gravity="center"
+            android:background="@drawable/white_rectangle"
+            android:layout_weight="1"
+            android:layout_marginLeft="5dp"
+            android:padding="10dp"
+            />
+        </LinearLayout>
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/input_editFavouriteTeam"
+            android:layout_marginTop="10dp"
+            android:visibility="gone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:hintEnabled="false"
+            >
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/et_EditFavouriteTeam"
+                android:hint="Add Your Favourite Team"
+                android:singleLine="true"
+                android:textSize="14sp"
+                android:textColorHint="#626262"
+                android:layout_centerHorizontal="true"
+                android:background="@drawable/edittext_back"
+                android:padding="12dp" />
+        </android.support.design.widget.TextInputLayout>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Update Profile"
+            android:id="@+id/tv_EditUpdateProfile"
+            android:padding="12dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="20dp"
+            android:background="@drawable/dark_rectangle"
+            android:textColor="@color/white"
+            android:gravity="center"
+            android:textSize="16sp"/>
+
+
+            </LinearLayout>
+
+        </RelativeLayout>
+    </ScrollView>
+
+
+
+
+
+</RelativeLayout>

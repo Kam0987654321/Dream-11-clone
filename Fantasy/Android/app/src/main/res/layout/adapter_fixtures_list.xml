@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:padding="5dp"
+        android:background="@drawable/white_rectangle"
+        android:elevation="3dp">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+      android:id="@+id/linearlayout"
+        android:weightSum="3">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1">
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_centerHorizontal="true"
+            android:id="@+id/im_Team1"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@+id/im_Team1"
+            android:id="@+id/tv_TeamOneName"
+            android:textAlignment="center"
+            android:maxLines="2"
+            android:ellipsize="end"
+            android:text="No Team1"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_weight="1">
+
+        <TextView
+            android:id="@+id/tv_TeamsName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:ellipsize="end"
+            android:maxLines="3"
+            android:text="NA"
+            android:textAlignment="center"
+            android:textColor="#858585" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="vs"
+            android:textSize="12sp"
+            android:textColor="#626262"
+            android:layout_below="@+id/tv_TeamsName"
+            android:layout_centerHorizontal="true"
+            android:id="@+id/tv_TeamsVS"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="00:00:00"
+            android:background="@drawable/dark_rectangle"
+            android:textSize="10sp"
+            android:textColor="@color/white"
+            android:padding="5dp"
+            android:textAlignment="center"
+            android:drawablePadding="5dp"
+            android:layout_below="@+id/tv_TeamsVS"
+            android:layout_centerHorizontal="true"
+            android:id="@+id/tv_TimeRemained"/>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1">
+
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_centerHorizontal="true"
+
+            android:id="@+id/im_Team2"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@+id/im_Team2"
+            android:id="@+id/tv_TeamTwoName"
+            android:text="No Team2"
+            android:textAlignment="center"
+            android:maxLines="2"
+            android:ellipsize="end"/>
+
+    </RelativeLayout>
+    </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            android:layout_below="@+id/linearlayout"
+            android:id="@+id/linearlayout2"
+            android:weightSum="2"
+            >
+       <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="start"
+                    >
+
+           <TextView
+               android:id="@+id/tv_TeamOneScore"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:layout_marginTop="2dp"
+               android:ellipsize="end"
+               android:maxLines="2"
+               android:text=""
+               android:textAlignment="center" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tv_TeamOneScore"
+                    android:id="@+id/tv_TeamOneOver"
+                    android:textAlignment="center"
+                    android:maxLines="2"
+                    android:layout_marginTop="2dp"
+                    android:ellipsize="end"
+                    android:text=""/>
+      </RelativeLayout>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="end"
+                android:layout_weight="1"
+                >
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/tv_TeamTwoScore"
+        android:textAlignment="center"
+        android:maxLines="2"
+        android:layout_marginTop="2dp"
+        android:ellipsize="end"
+        android:layout_marginEnd="5dp"
+        android:text=""/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_TeamTwoScore"
+        android:id="@+id/tv_TeamTwoOver"
+        android:textAlignment="center"
+        android:maxLines="2"
+        android:layout_marginTop="2dp"
+        android:layout_marginEnd="5dp"
+        android:ellipsize="end"
+        android:text=""/>
+            </RelativeLayout>
+
+
+        </LinearLayout>
+        <TextView
+            android:id="@+id/tv_MatchResult"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/linearlayout2"
+            android:layout_marginTop="5dp"
+            android:ellipsize="end"
+            android:maxLines="2"
+            android:text=""
+            android:visibility="gone"
+            android:layout_centerHorizontal="true"
+            android:textAlignment="center" />
+</RelativeLayout>
+
+
+
+
+</RelativeLayout>

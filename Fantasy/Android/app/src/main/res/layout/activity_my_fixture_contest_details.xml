@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <include
+        layout="@layout/activity_mainheader"
+        android:id="@+id/head"/>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/rectangle_gradient"
+        android:id="@+id/RL_BelowHead"
+        android:layout_below="@+id/head">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="8dp"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/white_rectangle">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:id="@+id/tv_ContestTeamsName"
+                android:layout_toLeftOf="@+id/tv_ContestTimer"
+                android:maxLines="1"
+                android:ellipsize="end"
+                android:text="Team Name"
+                android:textColor="#1e1e1e" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:id="@+id/tv_ContestTimer"
+                android:text="Timer"
+                android:drawablePadding="5dp"
+                android:drawableLeft="@drawable/watch_icon_cont"
+                android:drawableTint="#eb4949"
+                android:layout_alignParentRight="true"
+                android:textColor="#eb4949" />
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/RL_BelowHead">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_margin="5dp"
+        android:background="@drawable/white_rectangle"
+        android:elevation="2dp"
+        android:id="@+id/Rl_ContestDetails"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:weightSum="2"
+                android:orientation="horizontal">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_gravity="center"
+
+                    android:layout_margin="10dp"
+                    android:orientation="vertical">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="TOTAL WINNINGS"
+                        android:textSize="13sp"
+                        android:textColor="#858585"
+                        />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="₹ 0"
+                        android:id="@+id/tv_TotalWinning"
+                        android:layout_marginTop="2dp"
+                        android:textSize="14sp"
+                        android:textColor="@color/sixtwo"
+                        android:textStyle="bold"/>
+                </LinearLayout>
+                <View
+                    android:layout_width="1dp"
+                    android:layout_gravity="center"
+                    android:layout_height="match_parent"
+                    android:background="@color/myteamdivider"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_gravity="center"
+                    android:layout_margin="10dp"
+                    android:orientation="vertical">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="ENTRY FEE"
+                        android:textSize="13sp"
+                        android:textColor="#858585"
+                        />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Free"
+                        android:layout_marginTop="2dp"
+                        android:id="@+id/tv_EntryFess"
+                        android:textSize="14sp"
+                        android:textColor="@color/sixtwo"
+                        android:textStyle="bold"/>
+                </LinearLayout>
+            </LinearLayout>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:background="@color/myteamdivider"
+                />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:weightSum="2"
+                android:orientation="horizontal">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_gravity="center"
+                    android:layout_margin="10dp"
+                    android:orientation="vertical">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="JOINED WITH"
+                        android:textSize="13sp"
+                        android:textColor="#858585"
+                        />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Team 1"
+                        android:id="@+id/tv_JoinedWithTeam"
+                        android:layout_marginTop="2dp"
+                        android:textSize="14sp"
+                        android:textColor="@color/colorPrimary"
+                        android:textStyle="bold"/>
+                </LinearLayout>
+
+            </LinearLayout>
+        </LinearLayout>
+
+        </LinearLayout>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#bfbfbf"
+        android:id="@+id/RL_LeaderboardList"
+        android:layout_below="@+id/Rl_ContestDetails"
+        android:layout_marginTop="20dp">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingBottom="10dp"
+        android:paddingTop="10dp"
+        android:layout_marginLeft="10dp"
+        android:textColor="#1e1e1e"
+        android:id="@+id/tv_TotalJoinedTeamCount"
+        android:text="Teams"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingBottom="10dp"
+        android:paddingTop="10dp"
+        android:layout_marginLeft="10dp"
+        android:textColor="#1e1e1e"
+        android:text="RANK"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="10dp"/>
+
+    </RelativeLayout>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/Rv_MyFixLeaderboard"
+        android:layout_below="@+id/RL_LeaderboardList"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="vertical" />
+
+        </RelativeLayout>
+    </ScrollView>
+
+
+</RelativeLayout>

@@ -1,0 +1,682 @@
+/*-----------------------------------------------------------------------------------
+   CSS INDEX
+  ===================
+
+  1. Theme Default CSS (body, link color, section etc)
+  2. 
+
+-----------------------------------------------------------------------------------*/
+
+
+/*----------------------------------------*/
+/*  1.  Theme default CSS
+/*----------------------------------------*/
+
+html, body {
+  height: 100%;
+}
+
+a:focus {
+  outline: 0px solid;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.fix {
+  overflow: hidden;
+}
+
+p {
+  margin: 0 0 15px;
+  color: #444;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Raleway', sans-serif;
+  margin: 0 0 15px;
+  color: #444;
+  font-weight: 500;
+}
+
+h1 {
+  font-size: 48px;
+  line-height: 50px;
+}
+
+h2 {
+  font-size: 38px;
+  line-height: 40px;
+}
+
+h3 {
+  font-size: 30px;
+  line-height: 32px;
+}
+
+h4 {
+  font-size: 24px;
+  line-height: 26px;
+}
+
+h5 {
+  font-size: 20px;
+  line-height: 22px;
+}
+
+h6 {
+  font-size: 16px;
+  line-height: 20px;
+}
+
+a {
+  transition: all 0.3s ease 0s;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #3EC1D5;
+  text-decoration: none;
+}
+
+a:active, a:hover {
+  outline: 0 none;
+}
+
+body {
+  background: #fff none repeat scroll 0 0;
+  color: #444;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 14px;
+  text-align: left;
+  overflow-x: hidden;
+  overflow-y:hidden;
+  line-height: 22px;
+}
+
+.clear {
+  clear: both;
+}
+
+ul {
+  list-style: outside none none;
+  margin: 0;
+  padding: 0;
+}
+
+input, select, textarea, input[type="text"], input[type="date"], input[type="url"], input[type="email"], input[type="password"], input[type="tel"], button, button[type="submit"] {
+  -moz-appearance: none;
+  box-shadow: none !important;
+}
+
+
+/*----------------------------------------*/
+/*  2.  Pre Define Paddings TOP-PADDINGS
+/*----------------------------------------*/
+
+
+.ptb--10 { padding: 10px 0; }
+.ptb--20 { padding: 20px 0; }
+.ptb--30 { padding: 30px 0; }
+.ptb--40 { padding: 40px 0; }
+.ptb--50 { padding: 50px 0; }
+.ptb--60 { padding: 60px 0; }
+.ptb--70 { padding: 70px 0; }
+.ptb--80 { padding: 80px 0; }
+.ptb--90 { padding: 90px 0; }
+.ptb--100 { padding: 100px 0; }
+.ptb--110 { padding: 110px 0; }
+.ptb--120 { padding: 120px 0; }
+.ptb--130 { padding: 130px 0; }
+.ptb--140 { padding: 140px 0; }
+.ptb--150 { padding: 150px 0; }
+.ptb--160 { padding: 160px 0; }
+.ptb--170 { padding: 170px 0; }
+.ptb--180 { padding: 180px 0; }
+
+.pzero {padding:0px;}
+
+/*----------------------------------------*/
+/*  3.  Colors
+/*----------------------------------------*/
+.main-bg-color{
+
+  background: linear-gradient(63deg, #00255c 42%,#00bcac 72%) ;
+
+}
+
+
+
+.main-bg-img{
+
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+
+}
+
+/*----------------------------------------*/
+/*  3.  HEADER
+/*----------------------------------------*/
+
+
+.top-header{
+
+  background: linear-gradient(63deg, #e90d0d 42%,#0201fc 72%);
+  color:#fff;
+  padding:10px 0px;
+   -webkit-box-shadow: 0px 2px 5px 0px rgba(173,173,173,1);
+    -moz-box-shadow: 0px 2px 5px 0px rgba(173,173,173,1);
+    box-shadow: 0px 2px 5px 0px rgba(173,173,173,1);
+    
+
+}
+
+
+
+.top-header div.site-title h5{
+
+    color: #fff;
+    text-align: center; 
+    font-family: 'Permanent Marker', cursive;
+    font-weight: 600;
+   
+
+}
+
+.top-header .short-nav-bar{
+
+  padding:10px 15px;
+  text-align: center;
+
+}
+
+
+.top-header .short-nav-bar a{
+
+  color: #fff;
+
+}
+
+
+
+/*----------------------------------------*/
+/*  3.  MATCH-LIST_SLIDER
+/*----------------------------------------*/
+
+.match-list-slider{
+
+  background-color: #efeff4;
+     z-index: 1;
+    position: relative;
+    height: 100vh;
+    /* overflow-y: scroll; */
+    overflow-x: hidden;
+
+
+
+}
+
+.match-list-slider .fixed-col{
+
+ height:100%; 
+ overflow:hidden;
+
+}
+
+
+
+.match-list-slider .scroll-col{
+
+  height:501px; 
+  overflow-y:scroll;
+
+}
+
+
+ .match-list-slider  .match-slide{
+
+  background-color: #fff;
+  margin: 8px;
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.3);
+  border-radius: 2px;
+  overflow: hidden;
+  padding:15px 0px;
+  text-align: center;         
+
+
+}
+
+
+.match-list-slider  .match-slide a{
+
+       color:#000;
+}
+
+.match-list-slider  .match-slide a .img-container img{
+
+  width: 65%;  
+  height:100%;
+
+}    
+
+.match-list-slider  .match-slide a div.time{
+
+    color: #c61c23;
+    font-family: monospace;
+    height:20px;
+    width: 100%;
+    font-size: 11px;
+
+}
+
+.match-list-slider  .match-slide a div.IOD{
+
+    height:20px;
+    width: 100%;
+    font-size: 11px;
+
+}
+
+.match-list-slider  .match-slide a div.vstext{
+
+    height:20px;
+    width: 100%;
+    font-size: 11px;
+
+}
+
+/*----------------------------------------*/
+/*  3.  MATCH-LIST_SLIDER RESPONSIVE
+/*----------------------------------------*/
+
+@media (max-width: 576px) { 
+
+   
+
+
+ }
+
+/*----------------------------------------*/
+/*  3.  SCROLL-BAR-MATCH-CONTAINER
+/*----------------------------------------*/
+.style-15::-webkit-scrollbar-track
+{
+  -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.1);
+  background-color: #F5F5F5;
+  border-radius: 10px;
+}
+
+.style-15::-webkit-scrollbar
+{
+  width: 5px;
+  background-color: #F5F5F5;
+}
+
+.style-15::-webkit-scrollbar-thumb
+{
+  border-radius: 10px;
+  background-color: #FFF;
+  background-image: -webkit-gradient(linear,
+                     40% 0%,
+                     75% 84%,
+                     from(#fff),
+                     to(#fff),
+                     color-stop(.6,#0201fc))
+}
+
+
+
+
+
+/*----------------------------------------*/
+/*  3.  BOTTOM-NAV-BAR
+/*----------------------------------------*/
+
+
+.bottom-nav-bar{
+
+  background: #fff;
+  padding:5px 0px;
+  text-align: center;
+  box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.5);
+
+}
+
+
+.bottom-nav-bar a{
+
+  color: #000;
+  display: inline-block;
+  margin:0px 15px;
+  text-align: center;
+  width:17%;
+  
+
+}
+
+.bottom-nav-bar .bottom-menu-item{padding:0px 20px;}
+
+.bottom-nav-bar a .bottom-menu-item .icon-container i{
+
+  color:#635d5d;
+  font-size: 12px;
+}
+
+.bottom-nav-bar a .bottom-menu-item .menu-nam span{
+
+  color:#635d5d;
+  font-size: 9px;
+  text-transform: uppercase;
+}
+
+/*----------------------------------------*/
+/*  3.  RESPONSIVE-BOTTOM-NAV-BAR
+/*----------------------------------------*/
+
+@media (max-width: 576px) { 
+
+ .bottom-nav-bar{
+    
+      background: #fff;
+      padding:5px 0px;
+      text-align: center;
+      box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.5);
+    
+    }
+    
+    
+    .bottom-nav-bar a{
+    
+      color: #000;
+      display: inline-block;
+      margin:0px 15px;
+      text-align: center;
+      width:15%;
+      
+    
+    }
+    
+    .bottom-nav-bar .bottom-menu-item{padding:0px 15px;}
+    
+    .bottom-nav-bar a .bottom-menu-item .icon-container i{
+    
+      color:#635d5d;
+      font-size: 12px;
+    }
+    
+    .bottom-nav-bar a .bottom-menu-item .menu-nam span{
+    
+      color:#635d5d;
+      font-size: 9px;
+      text-transform: uppercase;
+    }
+
+
+ }
+
+
+
+/*----------------------------------------*/
+/*  3.  SIGNUP-LOGIN-CSS
+/*----------------------------------------*/
+.sign-up-container{
+
+    padding: 16px;
+    margin: 12px;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
+    background-color: #fff;
+
+}
+
+
+.sign-up-container .social-sign-up-btns{
+
+    display: flex;
+    justify-content: space-around;
+    padding: 12px 0;
+
+
+}
+
+
+.sign-up-container .social-sign-up-btns .social-btn{
+
+    display: flex;
+    padding: 10px;
+    width: 146px;
+    justify-content: space-around;
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.2);
+    border-radius: 2px;
+    float: left;
+
+}
+
+
+.sign-up-container .social-sign-up-btns .social-btn i.fa-facebook-f{
+
+    color: blue;
+    margin:5px 10px;
+}
+
+
+.sign-up-container .social-sign-up-btns .social-btn i.fa-google-plus-g{
+
+    color: red;
+    margin:5px 10px;
+}
+
+
+.sign-up-container .social-sign-up-btns .social-btn span{
+
+    color: #6d5e5e;
+}
+
+
+.sign-up-container .or-divder{
+
+    display: flex;
+    justify-content: center;
+    padding: 12px 0;
+    color: #9b9b9b;
+    font-weight: 700;
+
+}
+
+
+
+.from-area form input{
+
+    border:none;
+    border-bottom:2px #9b9b9b  solid;
+    border-radius: 0;
+}
+
+.from-area form input::placeholder {
+  color: #000;
+  font-size:12px;
+}
+
+
+.from-area .form-control:focus{
+    
+     color: #495057;
+    background-color: #fff;
+    border-color: none;
+    outline: 0;
+    box-shadow: none;
+    border-bottom:2px #000  solid;
+
+    
+}
+
+.from-area button{
+    
+   width: 100%;
+
+    
+}
+
+
+
+
+/*----------------------------------------*/
+/*  3.  CONTEST-CSS
+/*----------------------------------------*/
+ .match-list-slider  .contest-slide{
+
+  background-color: #fff;
+  margin: 8px;
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.3);
+  border-radius: 2px;
+  overflow: hidden;
+  padding:15px 0px;
+  text-align: center;         
+
+
+}
+
+ .match-list-slider  .contest-slide a{
+  
+  color: #000;       
+
+
+}
+
+
+.match-list-slider  .contest-heading{
+
+  padding:20px 0px; 
+
+}
+
+
+.match-list-slider .contest-slide .contest-heading h5{
+
+  color:#969696;
+
+}
+
+.match-list-slider .contest-slide .mega-heading{
+
+  padding:;
+
+
+}
+
+.match-list-slider .mega-heading h5{
+
+    color: #333232;
+    font-weight: bold;
+    font-size: 16px;
+    margin-bottom: 0px;
+
+
+}
+
+.match-list-slider  .mega-heading p{
+
+    color: #969696;
+    font-size: 13px;
+
+
+
+}
+
+.match-list-slider .contest-slide .contest-price-container{
+
+    border-radius: 4px;
+    display: block;
+    margin: 0 12px 0px 12px;
+    background-color: #fff;
+    text-decoration: none;
+
+}
+
+.match-list-slider .contest-slide .contest-price-container .prize-pool{
+
+  text-align: left;
+  font-size: 12px;
+  color: #969696;
+
+}
+
+
+.match-list-slider .contest-slide .contest-price-container .entry-fee{
+
+  text-align: right;
+  font-size: 12px;
+  color: #969696;
+
+}
+
+.match-list-slider .contest-slide .contest-price-container .prize{
+
+  text-align: left;
+  padding:10px 0px;
+
+}
+
+.match-list-slider .contest-slide .contest-price-container .prize span.rs{
+
+  text-align: left;
+  font-size: 15px;
+  color: #000;
+
+}
+
+.match-list-slider .contest-slide .contest-price-container .prize span.prize-amount{
+
+  text-align: left;
+  font-size: 20px;
+  color: #000;
+;
+
+}
+
+
+
+.match-list-slider .contest-slide .contest-price-container .entry-amount{
+
+  text-align: right;
+  font-size: 12px;
+  color: #969696;
+  padding:10px 0px;
+
+}
+
+
+.match-list-slider .contest-slide .contest-price-container .entry-amount button.btn{
+
+  font-size: 12px;
+    padding: 0px 20px;
+    height: 28px;
+  
+}
+
+
+.match-list-slider .contest-slide .progress{
+
+    height: 8px;
+
+}
+
+
+.match-list-slider .contest-slide .contest-price-container .spots-left{
+
+  text-align: left;
+  font-size: 12px;
+  color: #969696;
+
+}
+
+
+.match-list-slider .contest-slide .contest-price-container .spots-right{
+
+  text-align: right;
+  font-size: 12px;
+  color: #969696;
+
+}

@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <include
+        layout="@layout/activity_mainheader"
+        android:id="@+id/head"/>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/rectangle_gradient"
+        android:id="@+id/RL_ContestHead"
+        android:layout_below="@+id/head">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginTop="5dp"
+        android:background="@drawable/white_rectangle">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:id="@+id/tv_ContestTeamsName"
+            android:layout_toLeftOf="@+id/tv_ContestTimer"
+            android:maxLines="1"
+            android:ellipsize="end"
+            android:text="Team Name"
+            android:textColor="#1e1e1e" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:id="@+id/tv_ContestTimer"
+            android:text="Timer"
+            android:drawablePadding="5dp"
+            android:drawableLeft="@drawable/watch_icon_cont"
+            android:drawableTint="#eb4949"
+            android:layout_alignParentRight="true"
+            android:textColor="#eb4949" />
+    </RelativeLayout>
+
+
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/RL_ContestHead"
+        android:background="@color/white"
+        android:id="@+id/RL_CreateContest">
+     <LinearLayout
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content"
+         android:weightSum="2"
+         android:orientation="horizontal">
+         <TextView
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content"
+             android:text="Enter Contest Code"
+             android:layout_weight="1"
+             android:textSize="11sp"
+             android:id="@+id/tv_EnterContestCode"
+             android:paddingRight="20dp"
+             android:paddingLeft="20dp"
+             android:paddingTop="10dp"
+             android:visibility="gone"
+             android:gravity="center"
+             android:textColor="@color/white"
+             android:backgroundTint="@color/red"
+             android:background="@drawable/white_rectangle"
+             android:layout_margin="10dp"
+             android:paddingBottom="10dp"/>
+         <TextView
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content"
+             android:text="Create a Contest"
+             android:id="@+id/tv_CreateContest"
+             android:layout_weight="1"
+             android:textSize="11sp"
+             android:gravity="center"
+             android:paddingRight="20dp"
+             android:paddingLeft="20dp"
+             android:visibility="gone"
+             android:paddingTop="10dp"
+             android:textColor="@color/white"
+             android:backgroundTint="@color/red"
+             android:background="@drawable/white_rectangle"
+             android:layout_margin="10dp"
+             android:paddingBottom="10dp"/>
+     </LinearLayout>
+
+    </RelativeLayout>
+    <android.support.v4.widget.SwipeRefreshLayout
+        android:id="@+id/swipeRefreshLayout"
+        android:layout_below="@+id/RL_CreateContest"
+        android:layout_above="@+id/RL_BottomMyTeam"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/Rv_ContestList"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="vertical" />
+    </android.support.v4.widget.SwipeRefreshLayout>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="No Contest Available"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:visibility="gone"
+        android:id="@+id/tv_NoDataAvailable"/>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:id="@+id/RL_BottomMyTeam"
+        android:background="@color/white"
+        android:layout_alignParentBottom="true"
+        android:layout_height="wrap_content">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="My Team"
+        android:id="@+id/tv_MyTeam"
+        android:paddingRight="40dp"
+        android:paddingLeft="40dp"
+        android:paddingTop="10dp"
+        android:textColor="@color/white"
+        android:background="@drawable/dark_rectangle"
+        android:layout_margin="10dp"
+        android:layout_centerHorizontal="true"
+        android:paddingBottom="10dp"/>
+
+    </RelativeLayout>
+
+</RelativeLayout>

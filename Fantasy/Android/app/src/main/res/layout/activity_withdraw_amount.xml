@@ -1,0 +1,327 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <include
+        layout="@layout/activity_mainheader"
+        android:id="@+id/Head"
+        />
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/Head">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Available Amount for Withdrawl"
+                android:textAlignment="center"
+                android:id="@+id/tv_WithdrawAvailabeBalance"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="20dp"
+                android:textColor="#1e1e1e"
+                android:textStyle="bold"
+                android:textSize="18sp"
+                />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="10dp"
+                android:id="@+id/RL_RegisterLayout"
+                android:layout_below="@+id/tv_WithdrawAvailabeBalance"
+                android:layout_marginLeft="10dp">
+
+                <android.support.design.widget.TextInputLayout
+                    android:id="@+id/input_Amount"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    app:hintEnabled="false"
+                    >
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/et_WithdrawEnterAmount"
+                        android:hint="Enter Amount"
+                        android:singleLine="true"
+                        android:inputType="number"
+                        android:textColorHint="#626262"
+                        android:textSize="14sp"
+                        android:layout_centerHorizontal="true"
+                        android:background="@drawable/edittext_back"
+                        android:padding="12dp" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Amount should be multiple of 100"
+                        android:textColor="#626262"
+                        android:layout_marginTop="5dp"
+                        android:textSize="11sp"
+                        android:layout_marginBottom="2dp"/>
+                </android.support.design.widget.TextInputLayout>
+
+                <android.support.design.widget.TextInputLayout
+                    android:id="@+id/input_Name"
+                    android:layout_below="@+id/input_Amount"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    app:hintEnabled="false"
+                    >
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/et_WithdrawName"
+                        android:hint="Enter Name"
+                        android:textSize="14sp"
+                        android:singleLine="true"
+                        android:textColorHint="#626262"
+                        android:layout_centerHorizontal="true"
+                        android:background="@drawable/edittext_back"
+                        android:padding="12dp" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Enter Name which is linked with your account."
+                        android:layout_marginTop="5dp"
+                        android:textSize="11sp"
+                        android:textColor="#626262"
+                        android:layout_marginBottom="2dp"/>
+                </android.support.design.widget.TextInputLayout>
+
+                <android.support.design.widget.TextInputLayout
+                    android:id="@+id/input_Mobile"
+                    android:layout_below="@+id/input_Name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    app:hintEnabled="false"
+                    >
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/et_WithdrawMobile"
+                        android:hint="Enter Mobile Number"
+                        android:inputType="number"
+                        android:textColorHint="#626262"
+                        android:singleLine="true"
+                        android:textSize="14sp"
+                        android:layout_centerHorizontal="true"
+                        android:background="@drawable/edittext_back"
+                        android:padding="12dp" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Mobile Number which is linked with you bank account."
+                        android:layout_marginTop="5dp"
+                        android:textSize="11sp"
+                        android:textColor="#626262"
+                        android:layout_marginBottom="2dp"/>
+                </android.support.design.widget.TextInputLayout>
+
+                <android.support.design.widget.TextInputLayout
+                    android:id="@+id/input_AccountNumber"
+                    android:layout_below="@+id/input_Mobile"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    app:hintEnabled="false"
+                    >
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/et_WithdrawAccountNumber"
+                        android:hint="Enter Account Number"
+                        android:inputType="number"
+                        android:textColorHint="#626262"
+                        android:singleLine="true"
+                        android:textSize="14sp"
+                        android:layout_centerHorizontal="true"
+                        android:background="@drawable/edittext_back"
+                        android:padding="12dp" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Please check you account twice before submit."
+                        android:layout_marginTop="5dp"
+                        android:textSize="11sp"
+                        android:textColor="#626262"
+                        android:layout_marginBottom="2dp"/>
+                </android.support.design.widget.TextInputLayout>
+                <android.support.design.widget.TextInputLayout
+                    android:id="@+id/input_BankName"
+                    android:layout_below="@+id/input_AccountNumber"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    app:hintEnabled="false"
+                    >
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/et_WithdrawBankName"
+                        android:hint="Enter Bank Name"
+                        android:textColorHint="#626262"
+                        android:singleLine="true"
+                        android:textSize="14sp"
+                        android:layout_centerHorizontal="true"
+                        android:background="@drawable/edittext_back"
+                        android:padding="12dp" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Enter your bank name."
+                        android:layout_marginTop="5dp"
+                        android:textSize="11sp"
+                        android:textColor="#626262"
+                        android:layout_marginBottom="2dp"/>
+                </android.support.design.widget.TextInputLayout>
+                <android.support.design.widget.TextInputLayout
+                    android:id="@+id/input_IFSCCode"
+                    android:layout_below="@+id/input_BankName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    app:hintEnabled="false"
+                    >
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/et_WithdrawIFSCCode"
+                        android:hint="Enter IFSC Code"
+                        android:textColorHint="#626262"
+                        android:singleLine="true"
+                        android:textSize="14sp"
+                        android:layout_centerHorizontal="true"
+                        android:background="@drawable/edittext_back"
+                        android:padding="12dp" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Enter your branch IFSC Code."
+                        android:layout_marginTop="5dp"
+                        android:textSize="11sp"
+                        android:textColor="#626262"
+                        android:layout_marginBottom="2dp"/>
+                </android.support.design.widget.TextInputLayout>
+                <android.support.design.widget.TextInputLayout
+                    android:id="@+id/input_BranchAddress"
+                    android:layout_below="@+id/input_IFSCCode"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    app:hintEnabled="false"
+                    >
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/et_WithdrawBranchAddress"
+                        android:hint="Enter Branch Address"
+                        android:textColorHint="#626262"
+                        android:singleLine="true"
+                        android:textSize="14sp"
+                        android:layout_centerHorizontal="true"
+                        android:background="@drawable/edittext_back"
+                        android:padding="12dp" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Enter your branch address."
+                        android:layout_marginTop="5dp"
+                        android:textSize="11sp"
+                        android:textColor="#626262"
+                        android:layout_marginBottom="2dp"/>
+                </android.support.design.widget.TextInputLayout>
+                <android.support.design.widget.TextInputLayout
+                    android:id="@+id/input_PANNumber"
+                    android:layout_below="@+id/input_BranchAddress"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    app:hintEnabled="false"
+                    >
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/et_WithdrawPAN"
+                        android:hint="Enter PAN Number"
+                        android:textColorHint="#626262"
+                        android:singleLine="true"
+                        android:textSize="14sp"
+                        android:layout_centerHorizontal="true"
+                        android:background="@drawable/edittext_back"
+                        android:padding="12dp" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Enter your PAN Card Number."
+                        android:layout_marginTop="5dp"
+                        android:textSize="11sp"
+                        android:textColor="#626262"
+                        android:layout_marginBottom="2dp"/>
+                </android.support.design.widget.TextInputLayout>
+                <android.support.design.widget.TextInputLayout
+                    android:id="@+id/input_AdhaarNumber"
+                    android:layout_below="@+id/input_PANNumber"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    app:hintEnabled="false"
+                    >
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/et_WithdrawAdhaar"
+                        android:hint="Enter Adhaar Card Number"
+                        android:textColorHint="#626262"
+                        android:singleLine="true"
+                        android:textSize="14sp"
+                        android:layout_centerHorizontal="true"
+                        android:background="@drawable/edittext_back"
+                        android:padding="12dp" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Enter your Adhaar Card Number"
+                        android:layout_marginTop="5dp"
+                        android:textSize="11sp"
+                        android:textColor="#626262"
+                        android:layout_marginBottom="2dp"/>
+                </android.support.design.widget.TextInputLayout>
+
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Submit Request"
+                    android:textAlignment="center"
+                    android:gravity="center"
+                    android:padding="12dp"
+                    android:layout_below="@+id/input_AdhaarNumber"
+                    android:layout_marginTop="20dp"
+                    android:background="@drawable/dark_rectangle"
+                    android:elevation="3dp"
+                    android:textColor="@color/white"
+                    android:textSize="16sp"
+                    android:layout_marginBottom="20dp"
+                    android:id="@+id/tv_SubmitWithdrawRequest"
+                    />
+
+            </RelativeLayout>
+        </RelativeLayout>
+    </ScrollView>
+
+
+
+
+</RelativeLayout>

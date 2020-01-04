@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:background="@color/white"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="2dp"
+        android:padding="5dp"
+        android:id="@+id/RL_PlayerListMain"
+        android:elevation="0dp">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/tv_TeamNumber"
+        android:visibility="invisible"/>
+    <ImageView
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:src="@drawable/ground11"
+        android:id="@+id/im_PlayerImage"/>
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:id="@+id/RL_Name"
+        android:layout_toRightOf="@+id/im_PlayerImage"
+        android:layout_marginLeft="10dp">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Player Name"
+        android:id="@+id/tv_PlayerName"
+        android:textColor="#1e1e1e"
+        />
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_below="@+id/tv_PlayerName">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="NA"
+            android:layout_gravity="center"
+            android:layout_marginRight="5dp"
+            android:id="@+id/tv_PlayerTeamName"
+            android:textColor="#1e1e1e"
+            />
+        <View
+            android:layout_width="1dp"
+            android:layout_height="10dp"
+            android:visibility="invisible"
+            android:layout_gravity="center"
+            android:background="#8e8e8e"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="00 Points"
+            android:layout_gravity="center"
+            android:id="@+id/tv_PlayerPoints"
+            android:textColor="#8e8e8e"
+            android:visibility="invisible"
+            android:layout_marginLeft="5dp"
+            />
+    </LinearLayout>
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:id="@+id/RL_Credit"
+        android:layout_alignParentRight="true">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0"
+            android:layout_centerVertical="true"
+            android:id="@+id/tv_PlayerCredit"
+            android:textColor="#1e1e1e"
+            android:layout_marginLeft="10dp"
+            />
+        <ImageView
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_toRightOf="@+id/tv_PlayerCredit"
+            android:layout_marginLeft="10dp"
+            android:id="@+id/im_AddPlayer"
+            android:layout_centerVertical="true"
+            android:padding="5dp"
+            android:src="@drawable/add_icon"/>
+
+    </RelativeLayout>
+
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#8e8e8e"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="2dp"
+        android:layout_marginRight="5dp"
+        android:layout_marginLeft="5dp"
+        android:layout_below="@+id/RL_PlayerListMain"/>
+
+</RelativeLayout>

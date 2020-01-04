@@ -1,0 +1,359 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context="com.ground11.g11.FragmentBottomMenu.MoreFragment">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="10dp">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:id="@+id/RL_InviteFriends"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            >
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/RL_MoreInviteFriend"
+                android:elevation="3dp"
+                android:background="@drawable/white_rectangle"
+                android:layout_margin="5dp"
+                android:padding="5dp"
+                android:layout_marginTop="10dp">
+
+                 <ImageView
+                     android:layout_width="30dp"
+                     android:layout_height="30dp"
+                     android:id="@+id/im_InviteFriends"
+                     android:layout_centerVertical="true"
+                     android:tint="@color/red"
+                     android:src="@drawable/invite_frnds" />
+
+                 <TextView
+                     android:layout_width="wrap_content"
+                     android:layout_height="wrap_content"
+                     android:id="@+id/tv_InviteFriend"
+                     android:layout_marginLeft="20dp"
+                     android:padding="10dp"
+                     android:layout_centerVertical="true"
+                     android:text="Invite Friends"
+                     android:layout_toRightOf="@+id/im_InviteFriends"
+                     android:layout_toLeftOf="@+id/im_arrow1"
+                     android:textColor="#626262" />
+
+                 <ImageView
+                     android:layout_width="wrap_content"
+                     android:layout_height="wrap_content"
+                     android:layout_centerVertical="true"
+                     android:layout_alignParentRight="true"
+                     android:layout_marginRight="20dp"
+                     android:id="@+id/im_arrow1"
+                     android:tint="@color/red"
+                     android:src="@drawable/arrow_icon_mr" />
+
+
+
+            </RelativeLayout>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="10dp"
+                android:background="@color/white"
+                />
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                android:layout_marginTop="10dp">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/im_ContestInvite"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/contest_invite" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/tv_tv_ContestInvite"
+                    android:layout_marginLeft="20dp"
+                    android:padding="10dp"
+                    android:layout_centerVertical="true"
+                    android:text="Contest Invite Code"
+                    android:layout_toRightOf="@+id/im_ContestInvite"
+                    android:layout_toLeftOf="@+id/im_arrow2"
+                    android:textColor="#626262" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="20dp"
+                    android:id="@+id/im_arrow2"
+                    android:src="@drawable/arrow_icon_mr" />
+
+
+
+            </RelativeLayout>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:visibility="gone"
+                android:layout_marginTop="10dp"
+                android:background="#626262"
+              />
+            <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+                android:id="@+id/RL_FantasyPointSystem"
+                android:elevation="3dp"
+                android:background="@drawable/white_rectangle"
+                android:layout_margin="5dp"
+                android:padding="5dp"
+                android:layout_marginTop="10dp">
+
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:id="@+id/im_FPS"
+                android:layout_centerVertical="true"
+                android:tint="@color/red"
+                android:src="@drawable/fantasy_point" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/tv_FPS"
+                android:layout_marginLeft="20dp"
+                android:padding="10dp"
+                android:layout_centerVertical="true"
+                android:text="Fantasy Point System"
+                android:layout_toRightOf="@+id/im_FPS"
+                android:layout_toLeftOf="@+id/im_arrow3"
+                android:textColor="#626262" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="20dp"
+                android:id="@+id/im_arrow3"
+                android:tint="@color/red"
+                android:src="@drawable/arrow_icon_mr" />
+
+
+
+        </RelativeLayout>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="10dp"
+                android:background="@color/white"
+                />
+            <RelativeLayout
+            android:layout_width="match_parent"
+                android:layout_marginTop="10dp"
+                android:id="@+id/RL_MoreHowToPlay"
+                android:elevation="3dp"
+                android:background="@drawable/white_rectangle"
+                android:layout_margin="5dp"
+                android:padding="5dp"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:id="@+id/im_HowToPlay"
+                android:layout_centerVertical="true"
+                android:tint="@color/red"
+                android:src="@drawable/how_to_play" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/tv_HowToPlay"
+                android:layout_marginLeft="20dp"
+                android:padding="10dp"
+                android:layout_centerVertical="true"
+                android:text="How to Play"
+                android:layout_toRightOf="@+id/im_HowToPlay"
+                android:layout_toLeftOf="@+id/im_arrow4"
+                android:textColor="#626262" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="20dp"
+                android:id="@+id/im_arrow4"
+                android:tint="@color/red"
+                android:src="@drawable/arrow_icon_mr" />
+
+
+
+        </RelativeLayout>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="10dp"
+                android:background="@color/white"
+                />
+            <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+                android:id="@+id/RL_MoreHelpDesk"
+                android:elevation="3dp"
+                android:background="@drawable/white_rectangle"
+                android:layout_margin="5dp"
+                android:padding="5dp"
+            android:layout_marginTop="10dp">
+
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:id="@+id/im_HelpDesk"
+                android:layout_centerVertical="true"
+                android:tint="@color/red"
+                android:src="@drawable/helpdesk" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/tv_HelpDesk"
+                android:layout_marginLeft="20dp"
+                android:padding="10dp"
+                android:layout_centerVertical="true"
+                android:text="Helpdesk"
+                android:layout_toRightOf="@+id/im_HelpDesk"
+                android:layout_toLeftOf="@+id/im_arrow5"
+                android:textColor="#626262" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="20dp"
+                android:id="@+id/im_arrow5"
+                android:tint="@color/red"
+                android:src="@drawable/arrow_icon_mr" />
+
+
+
+        </RelativeLayout>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="10dp"
+                android:background="@color/white"
+               />
+            <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+                android:visibility="gone"
+            android:layout_marginTop="10dp">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/im_WWU"
+                android:layout_centerVertical="true"
+                android:src="@drawable/work_withus" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/tv_WWU"
+                android:layout_marginLeft="20dp"
+                android:padding="10dp"
+                android:layout_centerVertical="true"
+                android:text="Work With Us"
+                android:layout_toRightOf="@+id/im_WWU"
+                android:layout_toLeftOf="@+id/im_arrow6"
+                android:textColor="#626262" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="20dp"
+                android:id="@+id/im_arrow6"
+                android:src="@drawable/arrow_icon_mr" />
+
+
+
+        </RelativeLayout>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:visibility="gone"
+                android:layout_marginTop="10dp"
+                android:background="#626262"
+               />
+            <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+                android:id="@+id/RL_MoreAboutUs"
+                android:elevation="3dp"
+                android:background="@drawable/white_rectangle"
+                android:layout_margin="5dp"
+                android:padding="5dp"
+                android:layout_marginTop="10dp">
+
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:id="@+id/im_AboutUs"
+                android:layout_centerVertical="true"
+                android:tint="@color/red"
+                android:src="@drawable/about_us" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/tv_AboutUs"
+                android:layout_marginLeft="20dp"
+                android:padding="10dp"
+                android:layout_centerVertical="true"
+                android:text="About Us"
+                android:layout_toRightOf="@+id/im_AboutUs"
+                android:layout_toLeftOf="@+id/im_arrow7"
+                android:textColor="#626262" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="20dp"
+                android:id="@+id/im_arrow7"
+                android:tint="@color/red"
+                android:src="@drawable/arrow_icon_mr" />
+
+
+
+        </RelativeLayout>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="10dp"
+                android:background="@color/white"
+                 />
+        </LinearLayout>
+    </ScrollView>
+
+
+
+</RelativeLayout>

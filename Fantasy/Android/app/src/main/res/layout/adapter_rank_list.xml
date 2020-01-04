@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/LL_AdaRank"
+        android:weightSum="4">
+    <TextView
+        android:id="@+id/tv_Rank"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="15sp"
+        android:padding="10dp"
+        android:layout_weight="2"
+        android:textColor="#1e1e1e"
+        android:text="Rank: 0" />
+    <TextView
+        android:id="@+id/tv_Percent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="15sp"
+        android:padding="10dp"
+        android:gravity="center"
+        android:layout_weight="1"
+        android:textColor="@color/colorPrimary"
+        android:layout_alignParentEnd="true"
+        android:text="00%" />
+    <TextView
+        android:id="@+id/tv_Price"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="15sp"
+        android:padding="10dp"
+        android:gravity="center"
+        android:layout_weight="1"
+        android:textColor="@color/colorPrimary"
+        android:layout_alignParentEnd="true"
+        android:text="₹ 0" />
+
+    </LinearLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@+id/LL_AdaRank"
+        android:layout_marginTop="3dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:background="#dbdbdb"
+        />
+</RelativeLayout>

@@ -1,0 +1,39 @@
+﻿/* dCodes Framework */
+
+.js_hide_gadget {
+	margin-bottom: 24px
+}
+.js_hide_gadget.notend {
+	margin-bottom: 8px
+}
+.js_hide_gadget h4 {
+	padding: 8px 0 2px 16px;
+	color: #708090;
+	background: url(arrow_u.png) no-repeat left 14px
+}
+.js_hide_gadget h4 a {
+	color: #666;
+	font-size: 13px;
+	text-decoration: none;
+	border-bottom: 1px dotted #ccc;
+	padding-bottom: 2px
+}
+.js_hide_gadget h4 a:hover {
+	color: #999;
+	text-decoration: none;
+	border-bottom: 1px solid #ccc
+}
+.js_hide_gadget.js_minimized h4 {
+	background: url(arrow_d.png) no-repeat left 14px
+}
+div.js_hide_box {
+	padding: 3px;
+	background: #eeeeee;
+	-webkit-border-radius: 8px;
+	border-radius: 8px;
+	-webkit-box-shadow: 0px 1px 2px 1px #ccc;
+	box-shadow: 0px 1px 2px 1px #ccc
+}
+.js_minimized .js_hide_box {
+	display: none
+}

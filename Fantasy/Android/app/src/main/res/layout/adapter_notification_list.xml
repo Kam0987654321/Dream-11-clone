@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:background="@color/white"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="2dp"
+        android:padding="5dp"
+        android:id="@+id/RL_TransMain"
+        android:background="@drawable/edittext_back"
+        android:elevation="0dp">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:textSize="12sp"
+        android:textColor="#1e1e1e"
+        android:textStyle="bold"
+        android:id="@+id/tv_NotificationTitle"
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp"
+        android:layout_marginLeft="10dp"
+        />
+
+        <TextView
+            android:id="@+id/tv_NotificationContest"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignStart="@+id/tv_NotificationTitle"
+            android:layout_below="@+id/tv_NotificationTitle"
+            android:paddingBottom="5dp"
+            android:paddingTop="5dp"
+            android:text="Contest"
+            android:textColor="@color/eightE"
+            android:textSize="11sp" />
+
+
+    </RelativeLayout>
+
+
+
+</RelativeLayout>

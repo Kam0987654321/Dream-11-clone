@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">Myheros11</string>
+    <string name="let_s_play">Let\'s Play</string>
+    <string name="have_a_referral_code">Have a referral code?</string>
+    <string name="enter_a_code">Enter a code</string>
+    <string name="already_a_user">Already a user?</string>
+    <string name="log_in">Log in</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string name="facebook_app_id">1398014817005001</string>
+    <string name="fb_login_protocol_scheme">fb1398014817005001</string>
+
+    <string name="by_joining_this">By Joining this contest, you accept Myheros11\'s T&amp;C and confirm that you are not a resident of Assam, Odisha, Telangana, Nagaland or Sikkim.</string>
+
+    <string name="MinimumWithdrawAmountLimit">500</string>
+
+</resources>

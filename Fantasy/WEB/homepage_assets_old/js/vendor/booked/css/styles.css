@@ -1,0 +1,608 @@
+/* SAVING STATES, ETC */
+body .calendarSavingState,
+body #data-ajax-url { display:none; }
+
+#wp-admin-bar-booked .ab-icon:before { content: "\f508"; top:1px; }
+body.booked-noScroll { position:fixed; width:100%; overflow:hidden; }
+
+/* GENERAL STYLES */
+body .bookedClearFix:after { content: ""; display: table; clear: both; }
+body table.booked-calendar th,
+body table.booked-calendar td { font-weight:400; }
+
+/* BUTTON STYLES */
+body #booked-profile-page input[type=submit],
+body #booked-profile-page button,
+body .booked-list-view input[type=submit],
+body .booked-list-view button,
+body table.booked-calendar input[type=submit],
+body table.booked-calendar button,
+body .booked-modal input[type=submit],
+body .booked-modal button
+{ -webkit-appearance:none; height:auto; font-size:12px; display:inline-block; padding:0 12px; background:#eee; color:#333; line-height: 30px; text-shadow: none; -moz-box-shadow: none; -webkit-box-shadow: none; box-shadow: none; border:1px solid #ccc;; }
+
+body #booked-profile-page input[type=submit].bb-small,
+body #booked-profile-page button.bb-small,
+body .booked-list-view input[type=submit].bb-small,
+body .booked-list-view button.bb-small,
+body table.booked-calendar input[type=submit].bb-small,
+body table.booked-calendar button.bb-small,
+body .booked-modal input[type=submit].bb-small,
+body .booked-modal button.bb-small
+{ line-height:24px; padding:0 8px; }
+
+body #booked-profile-page input[type=submit].button-primary,
+body table.booked-calendar input[type=submit].button-primary,
+body .booked-list-view input[type=submit].button-primary,
+body .booked-modal input[type=submit].button-primary
+{ -webkit-appearance:none; height:auto; color:#fff; border-width:1px; border-style:solid; }
+
+body #booked-profile-page input[type=submit]:hover,
+body #booked-profile-page button:hover,
+body .booked-list-view input[type=submit]:hover,
+body .booked-list-view button:hover,
+body table.booked-calendar input[type=submit]:hover,
+body table.booked-calendar button:hover,
+body .booked-modal input[type=submit]:hover,
+body .booked-modal button:hover
+{ background:#ddd; color:#000; height:auto; text-shadow: none; -moz-box-shadow: none; -webkit-box-shadow: none; box-shadow: none; border:1px solid #ccc }
+
+body #booked-profile-page input[type=submit].button-primary:hover,
+body table.booked-calendar input[type=submit].button-primary:hover,
+body .booked-list-view input[type=submit].button-primary:hover,
+body .booked-modal input[type=submit].button-primary:hover
+{ color:#fff; height:auto; border:1px solid }
+
+/* Some required table color resets */
+body table.booked-calendar { box-sizing:border-box; text-shadow:none !important; box-shadow:none !important; }
+body table.booked-calendar thead th .page-right,
+body table.booked-calendar thead th .page-left { color:#fff !important; }
+body table.booked-calendar thead th { background:none !important; text-align:center !important; color:#fff !important; }
+body table.booked-calendar thead th .monthName { height:21px; display:inline-block; }
+body table.booked-calendar tbody td { padding:0; text-align:center; }
+
+/* CALENDAR STYLES */
+body .booked-calendar-wrap { margin:0 0 30px; }
+body .widget_booked_calendar .booked-calendar-wrap { margin:0; }
+body table.booked-calendar { margin:0; padding:0; background:#F1F1F1; border-spacing:0; width:100%; border:none; border-bottom:1px solid #ddd; }
+body table.booked-calendar thead { color:#fff; text-transform:uppercase; }
+body table.booked-calendar th { text-align:center; position:relative; font-size:20px; width:14.285%; border-width:1px; border-style:solid; padding:21px 0; line-height:1; }
+body table.booked-calendar tr.days { color:#fff; text-transform:uppercase; }
+body table.booked-calendar tr.days th { padding:13px 0 12px; border-width:1px; border-style:solid; font-size:14px; }
+body table.booked-calendar th .monthName a { font-size:12px; position:relative; top:-3px; padding-left:10px; text-decoration:none; text-transform:none; color:#fff; color:rgba(255,255,255,0.25); }
+body table.booked-calendar th .monthName a:hover { color:rgba(255,255,255,0.50); }
+body table.booked-calendar th .page-left { font-size:24px; color:#fff; position:absolute; left:20px; top:19px; }
+body table.booked-calendar th .page-right { font-size:24px; color:#fff; position:absolute; right:20px; top:19px; }
+body table.booked-calendar th .page-left:hover { left:19px; }
+body table.booked-calendar th .page-right:hover { right:19px; }
+body table.booked-calendar td { text-align:center; overflow:hidden; position:relative; font-size:20px; color:#333; padding:0; border-right:1px solid #e5e5e5; }
+body table.booked-calendar td:first-child { border-left:1px solid #ddd; }
+body table.booked-calendar td:last-child { border-right:1px solid #ddd; }
+body table.booked-calendar td .date { background:#fff; display:block; width:100%; height:100%; }
+body table.booked-calendar td .date .number { display:inline-block; -moz-border-radius:30px; -webkit-border-radius:30px; border-radius:30px; width: 50px; height: 50px; line-height:49px; }
+
+body table.booked-calendar td:hover .date { cursor:pointer; background:#fafafa; }
+body table.booked-calendar td:hover .date span { color:#fff; }
+body table.booked-calendar tr.week td.active { border-bottom-color:#ddd; }
+body table.booked-calendar tr.week td.active .date { background:#ddd; color:#555; }
+body table.booked-calendar tr.week td.active .date .number { border:none; background:#fff; color:#000; }
+body table.booked-calendar tr.week td.active { background:#ddd; }
+body table.booked-calendar tr.entryBlock { color:#fff; }
+body table.booked-calendar tr.entryBlock td { padding:2%; text-align:left; color:#fff; border-bottom-color:#ddd; }
+body table.booked-calendar tr.entryBlock.loading td { height:132px; }
+
+body table.booked-calendar td.prev-date .date,
+body table.booked-calendar td.prev-date:hover .date,
+body table.booked-calendar td.prev-date:hover .date span { cursor:not-allowed; background:#f5f5f5 !important; color:#ccc !important; }
+body table.booked-calendar td.blur .date,
+body table.booked-calendar td.blur:hover .date,
+body table.booked-calendar td.blur:hover .date span { cursor:not-allowed; background:#f5f5f5 !important; color:#ccc !important; }
+body table.booked-calendar td.next-month .date span,
+body table.booked-calendar td.prev-month .date span { color:#ccc; }
+body table.booked-calendar td.next-month:hover .date span,
+body table.booked-calendar td.prev-month:hover .date span { color:#fff; }
+body table.booked-calendar td.booked .date,
+body table.booked-calendar td.booked:hover .date,
+body table.booked-calendar td.booked .date span,
+body table.booked-calendar td.booked:hover .date span { cursor:not-allowed; background:#FFF9F8 !important; color:#FFA790 !important; }
+body table.booked-calendar td.active:hover .date span { background:#fff; }
+
+body table.booked-calendar.booked-pa-active td.booked .date,
+body table.booked-calendar.booked-pa-active td.booked:hover .date,
+body table.booked-calendar.booked-pa-active td.booked .date span,
+body table.booked-calendar.booked-pa-active td.booked:hover .date span { cursor:pointer; }
+body table.booked-calendar.booked-pa-active td.booked:hover .date span { background:#E35656 !important; color:#fff !important; }
+body table.booked-calendar.booked-pa-active tr.week td.booked.active .date,
+body table.booked-calendar.booked-pa-active tr.week td.booked.active .date:hover { background:#ddd !important; color:#555 !important; }
+body table.booked-calendar.booked-pa-active tr.week td.booked.active .date span,
+body table.booked-calendar.booked-pa-active tr.week td.booked.active .date span:hover { background:#fff !important; color:#555 !important; }
+
+body table.booked-calendar td.next-month .date,
+body table.booked-calendar td.prev-month .date { background:#fafafa }
+
+body table.booked-calendar td.today .date { color:#000; }
+body table.booked-calendar td.today .date span { border:2px solid #31afea; color:#000 !important; }
+body table.booked-calendar td.today.prev-date .date span { color:#ccc !important; }
+body table.booked-calendar td.today:hover .date { color:#000 !important; }
+body table.booked-calendar td.today:hover .date span { background:#31afea !important; color:#fff !important; }
+body table.booked-calendar td.today.active:hover .date span { background:#fff !important; color:#000 !important }
+body table.booked-calendar td.today.prev-date:hover .date span { background:none !important; color:#ccc !important; }
+
+body table.booked-calendar tr.week td.active .date, body table.booked-calendar tr.week td.active:hover .date, body table.booked-calendar tr.entryBlock { background:#ddd; }
+
+body .booked-calendar-wrap .booked-appt-list { font-size:15px; line-height:1.7; }
+body table.booked-calendar .booked-appt-list { color:#000; background:#fff; transform:scale(0.95); padding:30px 35px 10px; display:none; -webkit-box-shadow: 0 1px 5px rgba(0,0,0,0.20); -moz-box-shadow: 0 1px 5px rgba(0,0,0,0.20); box-shadow: 0 1px 5px rgba(0,0,0,0.20); -moz-border-radius:3px; -webkit-border-radius:3px; border-radius:3px; }
+body .booked-calendar-wrap .booked-appt-list.shown { transform:scale(1); }
+body .booked-calendar-wrap .booked-appt-list h2 { text-align:center; color:#555; font-size:20px; margin:0 0 30px; line-height:1.4; }
+body .booked-list-view .booked-appt-list h2.booked-no-prev { text-align:left; }
+body .booked-calendar-wrap .booked-appt-list p { color:#888; font-weight:400; margin:0 0 20px; }
+body .booked-calendar-wrap .booked-appt-list .timeslot { box-sizing:border-box; line-height:1.8; color:#888; border-top:1px solid #ddd; }
+body .booked-calendar-wrap .booked-appt-list .timeslot.faded { opacity:0.25; }
+body .booked-calendar-wrap .booked-appt-list .timeslot:hover { background:#f9f9f9; }
+body .booked-list-view .booked-appt-list .timeslot:hover { background:none; }
+body .booked-calendar-wrap .booked-appt-list .timeslot:last-child { margin:0 0 20px; }
+body .booked-calendar-wrap .booked-appt-list .timeslot .timeslot-title { margin: 0 0 10px 0; display: block; color: #4DC574; }
+body .booked-calendar-wrap .booked-appt-list .timeslot .timeslot-time { height:71px; padding:17px 0 0 0; box-sizing:border-box; float:left; }
+body .booked-calendar-wrap .booked-appt-list .timeslot.has-title .timeslot-time { height: auto; min-height:71px; }
+body .booked-calendar-wrap .booked-appt-list .timeslot .timeslot-time i.fa { color:#555; }
+body .booked-calendar-wrap .booked-appt-list .timeslot .timeslot-people { height:71px; padding:18px 0 0 0; box-sizing:border-box; float:right; }
+body .booked-calendar-wrap .booked-appt-list .timeslot .timeslot-time { line-height:1; width:60%; font-weight: 600; color: #555; font-size: 16px; }
+body .booked-calendar-wrap .booked-appt-list .timeslot .spots-available { font-weight:400; text-transform:uppercase; font-size:11px; display:block; line-height:2.7; color:#aaa; padding-bottom:8px; }
+body .booked-calendar-wrap .booked-appt-list .timeslot .spots-available.empty { color:#E35656; }
+body .booked-calendar-wrap .booked-appt-list .timeslot.timeslot-unavailable .spots-available { opacity:0; height:13px; }
+body .booked-calendar-wrap .booked-appt-list .timeslot .timeslot-people { width:40%; }
+body .booked-calendar-wrap .booked-appt-list .timeslot .timeslot-people button { float:right; margin:0 0 0 10px }
+body .booked-calendar-wrap .booked-appt-list .timeslot .timeslot-people button .button-timeslot { display:none; }
+body .booked-calendar-wrap .booked-appt-list .timeslot a { font-weight:600; text-decoration:none; }
+
+body .booked-calendar-wrap .booked-appt-list .timeslot.has-title.booked-hide-time .timeslot-time { min-height:auto; }
+body .booked-calendar-wrap .booked-appt-list .timeslot.has-title.booked-hide-time .timeslot-time .timeslot-title { margin:0; }
+body .booked-calendar-wrap .booked-appt-list .timeslot.has-title.booked-hide-time .timeslot-time .timeslot-range { display:none; }
+
+body table.booked-calendar .booked-appt-list .timeslot.has-title.booked-hide-time .timeslot-time { min-height:auto; }
+body table.booked-calendar .booked-appt-list .timeslot.has-title.booked-hide-time .timeslot-time .timeslot-title { margin:0; }
+body table.booked-calendar .booked-appt-list .timeslot.has-title.booked-hide-time .timeslot-time .timeslot-range { display:none; }
+
+body .booked-calendar-wrap .booked-appt-list .timeslot.timeslot-count-hidden .timeslot-time { height:60px; }
+body .booked-calendar-wrap .booked-appt-list .timeslot.timeslot-count-hidden .timeslot-people { height:60px; padding-top:13px; padding-right:13px; }
+body .booked-calendar-wrap .booked-appt-list .timeslot.timeslot-count-hidden .timeslot-time { padding-top:22px; }
+
+body .booked-calendar-wrap .booked-appt-list .timeslot .timeslot-time { padding-left:15px; }
+body .booked-calendar-wrap .booked-appt-list .timeslot .timeslot-people { padding-right:16px; }
+
+body .booked-list-view .booked-appt-list .timeslot .timeslot-time { padding-left:0; }
+body .booked-list-view .booked-appt-list .timeslot .timeslot-people,
+body .booked-list-view .booked-appt-list .timeslot.timeslot-count-hidden .timeslot-people { padding-right:0; }
+
+body .booked-calendar-wrap.small table.booked-calendar .booked-appt-list .timeslot:hover .timeslot-people { padding-right:0; }
+
+body .booked-calendar-wrap .booked-appt-list .timeslot .timeslot-people button { color:#fff; border-width:1px; border-style:solid; }
+body .booked-calendar-wrap .booked-appt-list .timeslot .timeslot-people button:hover { border-width:1px; border-style:solid; }
+body .booked-calendar-wrap .booked-appt-list .timeslot .timeslot-people button[disabled],
+body .booked-calendar-wrap .booked-appt-list .timeslot .timeslot-people button[disabled]:hover { cursor:default !important; background:#eee !important; border-color:#ddd !important; color:#aaa !important; }
+
+body .booked-list-view { position:relative; }
+body .booked-list-view .booked-appt-list .timeslot .timeslot-time { width:50%; }
+body .booked-list-view .booked-appt-list .timeslot .timeslot-people { width:50%; }
+
+body .booked-list-view.small .booked-appt-list h2,
+body .booked-list-view.booked-tight .booked-appt-list h2 { text-align:center; }
+body .booked-list-view.small .booked-list-view-nav,
+body .booked-list-view.booked-tight .booked-list-view-nav { display:block; margin:-5px 0 30px; position:relative; text-align:center; }
+body .booked-list-view.small .booked-list-view-nav .booked-list-view-date-next,
+body .booked-list-view.small .booked-list-view-nav .booked-list-view-date-prev,
+body .booked-list-view.booked-tight .booked-list-view-nav .booked-list-view-date-next,
+body .booked-list-view.booked-tight .booked-list-view-nav .booked-list-view-date-prev { margin:0 3px 5px; position:relative; display:inline-block; top:0; }
+
+body table.booked-calendar .timeslot-count strong { display:block; text-transform:uppercase; margin:20px 0 10px; }
+body table.booked-calendar .appt-block { width:80%; border-top:1px solid #ddd; display:block; padding:10px 0; }
+body table.booked-calendar .timeslot-count button { float:right; margin:0 0 0 10px; }
+body table.booked-calendar .timeslot-count a.delete { float:left; margin:0 10px 0 0; font-size:20px; line-height:1.3; color:#F59E9E; }
+body table.booked-calendar .timeslot-count a.delete:hover { color:#E35656; }
+body table.booked-calendar tr.week td.active:hover .count { top:-40px; }
+body table.booked-calendar .booked-appt-list .timeslot .timeslot-mobile-title,
+body .booked-calendar-wrap .booked-appt-list .timeslot .timeslot-people button .timeslot-mobile-title { display: none; }
+
+body .booked-calendar-wrap.small .booked-appt-list .timeslot .timeslot-people button .timeslot-mobile-title { display:block; }
+
+body .booked-calendarSwitcher.calendar { box-sizing:border-box; display:inline-block; margin:0; padding:8px 10px 9px 12px; color:#fff; -moz-border-radius:5px 5px 0 0; -webkit-border-radius:5px 5px 0 0; border-radius:5px 5px 0 0; }
+body .booked-calendarSwitcher.calendar p { line-height:1; margin:0; }
+body .booked-calendarSwitcher.calendar p i.fa { font-size:14px; margin:0 5px 0 0; position:relative; color:#fff; }
+body .booked-calendarSwitcher.calendar select { font-size:14px; min-width:200px; border:none; color:#fff; }
+body .booked-calendarSwitcher.calendar select:active, body .booked-calendarSwitcher.calendar select:focus { -moz-box-shadow:none; -webkit-box-shadow:none; box-shadow:none; outline:none; }
+
+body .booked-calendarSwitcher.list { box-sizing:border-box; display:inline-block; margin:0 0 20px; padding:0; }
+body .booked-calendarSwitcher.list p { line-height:1; margin:0; }
+body .booked-calendarSwitcher.list p i.fa { display:none; }
+body .booked-calendarSwitcher.list select { font-size:14px; min-width:200px; border:1px solid #ddd; background:#f9f9f9; height:30px; }
+body .booked-calendarSwitcher.list select:active, body .booked-calendarSwitcher.list select:focus { -moz-box-shadow:none; -webkit-box-shadow:none; box-shadow:none; outline:none; }
+
+/* SMALL CALENDAR */
+body .booked-calendar-wrap.small table.booked-calendar thead th { font-size:16px; padding:13px 0 10px; }
+body .booked-calendar-wrap.small table.booked-calendar thead tr.days th { font-size:11px; padding:7px 0 5px; }
+body .booked-calendar-wrap.small table.booked-calendar td { font-size:13px; }
+body .booked-calendar-wrap.small table.booked-calendar thead th .page-left { left:10px; top:11px; font-size:15px; }
+body .booked-calendar-wrap.small table.booked-calendar thead th .page-right { right:10px; top:11px; font-size:15px; }
+body .booked-calendar-wrap.small table.booked-calendar thead th .page-left:hover { left:9px; }
+body .booked-calendar-wrap.small table.booked-calendar thead th .page-right:hover { right:9px; }
+body .booked-calendar-wrap.small table.booked-calendar th .monthName { height:auto; display:inline-block; }
+body .booked-calendar-wrap.small table.booked-calendar th .monthName a { top:-2px; font-size:10px; }
+
+body .booked-calendar-wrap.small table.booked-calendar td .count { display:none; }
+body .booked-calendar-wrap.small table.booked-calendar td .date { height:100%; }
+
+body .booked-calendar-wrap.small table.booked-calendar td .date .number { border:none; display:block; -moz-border-radius:0; -webkit-border-radius:0; border-radius:0; transform:scale(1); width:100%; height:100%; vertical-align: middle; }
+body .booked-calendar-wrap.small table.booked-calendar td.blur .date,
+body .booked-calendar-wrap.small table.booked-calendar td.blur:hover .date { cursor:default; background:#EEEEEE; color:#ccc; }
+body .booked-calendar-wrap.small table.booked-calendar td.booked .date,
+body .booked-calendar-wrap.small table.booked-calendar td.booked:hover .date { cursor:default; background:#FFE4DF; color:#F15934; }
+body .booked-calendar-wrap.small table.booked-calendar td.today .date { background:#e3f2f9; color:#555; }
+body .booked-calendar-wrap.small table.booked-calendar td.today:hover .date { background:#eff7fb; color:#555; }
+body .booked-calendar-wrap.small table.booked-calendar td:hover .date { background:#f9f9f9; cursor:pointer; color:#000; }
+body .booked-calendar-wrap.small table.booked-calendar tr.week td.active .date .number { border:none; transform:scale(1.5); background:none; color:#000; }
+
+body .booked-calendar-wrap.small table.booked-calendar tr.entryBlock td { padding:5%; }
+body .booked-calendar-wrap.small .booked-appt-list { max-height:170px; overflow-y:auto; overflow-x:hidden; padding:15px 20px 10px; }
+body .booked-calendar-wrap.small .booked-appt-list h2 { text-align:center; margin:0 0 15px; font-size:15px; }
+body .booked-calendar-wrap.small .booked-appt-list h2 span { display:none; }
+body .booked-calendar-wrap.small .booked-appt-list .timeslot { border-top:0; margin:0 0 10px;  }
+body .booked-calendar-wrap.small .booked-appt-list .timeslot .timeslot-time,
+body .booked-calendar-wrap.small .booked-appt-list .timeslot .timeslot-count { display:none; }
+body .booked-calendar-wrap.small .booked-appt-list .timeslot .timeslot-people { width:100%; padding:0; height:auto; }
+body .booked-calendar-wrap.small .booked-appt-list .timeslot .timeslot-people button { float:none; margin:0; width:100%; height:auto; padding:7px 0; line-height:1.5; text-align:center; }
+
+body .booked-calendar-wrap.small .booked-appt-list .timeslot .timeslot-people button .button-timeslot { display:block; font-weight:600; font-size:13px; }
+body .booked-calendar-wrap.small .booked-appt-list .timeslot .timeslot-people button .button-text { display:none; }
+
+body .booked-calendar-wrap.small .booked-appt-list .timeslot.has-title.booked-hide-time .timeslot-people button .button-timeslot { display:none; }
+
+body .booked-calendar-wrap.small table.booked-calendar td.prev-date .date,
+body .booked-calendar-wrap.small table.booked-calendar td.prev-date:hover .date { cursor:default; background:#f9f9f9; color:#bbb; }
+body .booked-calendar-wrap.small table.booked-calendar td.blur .date,
+body .booked-calendar-wrap.small table.booked-calendar td.blur:hover .date { cursor:default; background:#eee; color:#ddd; }
+body .booked-calendar-wrap.small table.booked-calendar td.booked .date,
+body .booked-calendar-wrap.small table.booked-calendar td.booked:hover .date { cursor:default; background:#ffeae7; color:#f0b1a1; }
+body .booked-calendar-wrap.small table.booked-calendar tr.week td.active .date,
+body .booked-calendar-wrap.small table.booked-calendar td.today.active:hover .date span { background:#ddd !important; }
+
+/* List View Styles */
+body .booked-list-view.small .booked-appt-list h2 { color:#555; font-size:20px; margin:0 0 30px; }
+body .booked-list-view.small .booked-appt-list { max-height:none; padding:0; }
+body .booked-list-view .booked-appt-list { opacity:1; position:relative; }
+body .booked-list-view.booked-loading .booked-appt-list { opacity:0.15; }
+body .booked-list-view.booked-loading .booked-appt-list > h2 { opacity:0; }
+body .booked-list-view.booked-loading .booked_list_date_picker_trigger { /* opacity:0.15; */ }
+body .booked-list-view .booked-list-view-nav { position:absolute; top:0; left:0; width:100%; }
+body .booked-list-view .booked-list-view-nav .booked-list-view-date-next { position:absolute; top:1px; right:35px; font-weight:400; }
+body .booked-list-view .booked-list-view-nav .booked-list-view-date-prev { position:absolute; top:1px; left:0; font-weight:400; }
+
+body .booked-list-view span.booked-datepicker-wrap { position:absolute; top:2px; right:0; }
+body .booked-list-view a.booked_list_date_picker_trigger { text-align:center; transform:scale(1); background:#eee; border:1px solid #ccc; box-sizing:content-box; color:#333; display:inline-block; position:relative; top:-2px; margin:0; font-size:13px; width:24px; height:24px; line-height:23px; -moz-border-radius:3px; -webkit-border-radius:3px; border-radius:3px; }
+body .booked-list-view a.booked_list_date_picker_trigger:hover { background:#ddd; color:#000; border-color:#ccc; }
+body .booked-list-view a.booked_list_date_picker_trigger.booked-dp-active,
+body .booked-list-view a.booked_list_date_picker_trigger.booked-dp-active:hover { transform:scale(1.23); color:#fff; }
+
+.booked-appt-list .booked-public-appointment-title { display:block; font-weight:600; font-size:15px; padding:0 0 5px; }
+.booked-appt-list ul.booked-public-appointment-list, .booked-appt-list ul.booked-public-appointment-list li { display:block; font-weight:400; list-style:none; margin:0 0 14px; padding:0; }
+.booked-appt-list ul.booked-public-appointment-list li { padding:0; margin:0; }
+.booked-appt-list .booked-public-pending { color:#aaa; }
+.timeslot-time.booked-public-appointments { height:auto !important; }
+
+/* MODAL FORM */
+body .booked-form { padding-top:5px; }
+body .booked-form .field { margin:5px 0 7px; }
+body .booked-form .field.booked-text-content { margin-bottom:0; margin-top:20px; }
+body .booked-form .field.booked-text-content *:last-child { margin-bottom:0; }
+body .booked-form .field:after { content: ""; display: table; clear: both; }
+body .booked-form input[type=radio],
+body .booked-form input[type=checkbox] { position:relative; top:2px; }
+body .booked-form .field select,
+body .booked-form .field input[type=text],
+body .booked-form .field input[type=password],
+body .booked-form .field input[type=tel],
+body .booked-form .field input[type=email],
+body .booked-form .field textarea { background:#fff; border:1px solid #ccc; box-sizing:border-box; margin-right:1.5%; width:49.2%; float:left; }
+body .booked-form .field input:last-child { margin-right:0; }
+body .booked-form .field input[type=text],
+body .booked-form .field input[type=password],
+body .booked-form .field input[type=tel],
+body .booked-form .field input[type=email],
+body .booked-form .field textarea { font-size:13px; padding:7px 10px; color:#aaa; -moz-border-radius:3px; -webkit-border-radius:3px; border-radius:3px; }
+body .booked-form .field textarea,
+body .booked-form .field input.hasContent { color:#555; }
+body .booked-form .field input.large,
+body .booked-form .field select.large { width:100%; margin-right:1px; width:99.8%; }
+body .booked-form .spacer { padding:5px 0 0 0; margin:0; display:block; }
+body .booked-form .spacer.big { padding:25px 0 0; }
+body .booked-form hr { border:none; border-top:1px solid #ddd; padding:10px 0 0 0; margin:20px 0 0 0; }
+body .booked-form .condition-block { display:none; }
+body .booked-form .condition-block.default { display:block; }
+body .booked-form input[type=submit],
+body .booked-form button { float:left; margin:0 10px 0 0; }
+body .booked-form .field label { cursor:pointer; }
+body .booked-form .field label.field-label { cursor:default; display:block; font-weight:bold; padding:10px 0 8px; }
+body .booked-form .field textarea { height:100px; width:100%; box-sizing:border-box; line-height:1.6; }
+body .booked-form .field .checkbox-radio-block { display:block; padding:0 0 3px 10px; }
+body .booked-form .field .checkbox-radio-block label { font-size:13px; display:inline-block; padding-left:7px; position:relative; top:3px; }
+body .booked-form .cf-block { margin: 0 0 25px; }
+body .booked-form .cf-block select { font-size:13px; width:100%; height:33px; margin-right:0; padding:0 10px; }
+body .booked-form .cf-block ul, body .booked-form .cf-block ol { margin-left:30px; }
+body .booked-form .required-asterisk { color:#E35656; margin:-1px 0 0 7px; }
+body .booked-form #ajaxlogin { width:100%; }
+body .booked-form #ajaxlogin p.status { display:none; padding:15px 0 0; margin:0; font-size:15px; color:#888; }
+body .booked-form #newAppointmentForm p.status { display:none; padding:0 0 20px; margin:0; font-size:15px; color:#888; }
+body img.captcha-image { position:relative; top:5px; left:5px; }
+body #booked-page-form p.captcha, body .booked-modal .bm-window p.captcha { margin:-5px 0 15px; }
+body .booked-form .field p.field-small-p { font-size:14px; margin:-5px 0 10px; }
+body .booked-form input[type=submit].button:disabled { background:#ddd !important; border-color:#ddd !important; color:#aaa !important; cursor:not-allowed; }
+
+#customerChoices { display:block; text-align:left; background:#fff; padding:10px 0 15px 36px; margin:0 -36px 10px; border:1px solid #ddd; }
+#customerChoices .field { display:inline-block; }
+#customerChoices .field .checkbox-radio-block { padding-left:0; }
+#customerChoices .field { margin:0 20px 0 0; }
+#customerChoices .field:last-child { margin:0; }
+#customerChoices .field .checkbox-radio-block label { font-weight:400; font-size:15px; }
+
+
+/* MODAL WINDOWS */
+body .booked-modal { margin-top:-84px; min-height:168px; position: fixed; z-index:9999999; top:50%; right: 0; bottom: 0; left: 0; }
+body .booked-modal hr { border-top:1px solid #ddd; background:none; }
+body .booked-modal .bm-overlay { animation: booked-fadein 0.2s; -webkit-animation: booked-fadein 0.2s; -moz-animation: booked-fadein 0.2s; -ms-animation: booked-fadein 0.2s; -o-animation: booked-fadein 0.2s; -webkit-backface-visibility: hidden; position: fixed; background:#000; background: rgba(0, 0, 0, 0.65); top: 0; right: 0; bottom: 0; left: 0; }
+body .booked-modal .bm-window { animation: booked-flyin 0.2s; -webkit-animation: booked-flyin 0.2s; -moz-animation: booked-flyin 0.2s; -ms-animation: booked-flyin 0.2s; -o-animation: booked-flyin 0.2s; -webkit-backface-visibility: hidden; padding:43px 0 25px; width:450px; position:relative; margin:0 auto; background:#fff; -moz-border-radius:5px; -webkit-border-radius:5px; border-radius:5px; -moz-box-shadow:1px 1px 60px rgba(0,0,0,0.5); -webkit-box-shadow:1px 1px 60px rgba(0,0,0,0.5); box-shadow:1px 1px 60px rgba(0,0,0,0.5); }
+body .booked-modal.bm-loading .bm-window { background:none; -webkit-box-shadow:none; -moz-box-shadow:none; box-shadow:none; }
+body .booked-modal.bm-closing .bm-overlay { animation: booked-fadeout 0.2s; -webkit-animation: booked-fadeout 0.2s; -moz-animation: booked-fadeout 0.2s; -ms-animation: booked-fadeout 0.2s; -o-animation: booked-fadeout 0.2s; -webkit-backface-visibility: hidden; }
+body .booked-modal.bm-closing .bm-window { animation: booked-flyout 0.2s; -webkit-animation: booked-flyout 0.2s; -moz-animation: booked-flyout 0.2s; -ms-animation: booked-flyout 0.2s; -o-animation: booked-flyout 0.2s; -webkit-backface-visibility: hidden; }
+body .booked-modal .bm-window { background:#f5f5f5; max-height:100px; z-index:2000000000; }
+body .booked-modal .bm-window p { margin:0 0 15px; font-size:15px; }
+body .booked-modal .bm-window p small { display:block; margin:0 0 15px; text-transform:uppercase; font-size:13px; font-weight:600; }
+body .booked-modal .bm-window p.title { color: #50C676; font-weight: bold; font-size: 18px; margin-bottom: 5px; }
+body .booked-modal .bm-window p.name { font-size:15px; margin:0 0 20px; line-height:1.7; }
+body .booked-modal .bm-window p strong { font-size:13px; text-transform:uppercase; display:inline-block; padding-right:3px; font-weight:600; }
+body .booked-modal .bm-window a { text-decoration:none; }
+body .booked-modal .bm-window .close { line-height:1; color:#fff; color:rgba(255,255,255,0.5); font-size:20px; position:absolute; top:11px; right:14px; }
+body .booked-modal .bm-window .close:hover { color:#fff; }
+body .booked-modal .bm-window p i.fa.fa-clock-o { font-size: 18px; position: relative; top: 1px; }
+body .booked-modal .bm-window p.booked-calendar-name { font-weight:600; font-size:15px; }
+
+body .booked-modal .bm-window .booked-scrollable { max-height:100px; padding:25px 30px; overflow-y:auto; overflow-x:hidden; background:#f5f5f5; -moz-border-radius:3px; -webkit-border-radius:3px; border-radius:3px; box-sizing:content-box; }
+body .booked-modal .bm-window p.booked-title-bar { box-sizing: border-box; font-size: 13px; position: absolute; top: 0; left: 0; line-height:1; width: 100%; color: #fff; border-radius: 4px 4px 0 0; padding: 15px 30px 15px 15px; }
+body .booked-modal .bm-window p.booked-title-bar small { margin:0; }
+
+/* Scrolling Fixes */
+body .booked-modal .bm-window .booked-scrollable { -webkit-overflow-scrolling:touch; } 
+body .booked-modal .bm-window .booked-scrollable > * { -webkit-transform: translateZ(0px); -webkit-transform: translate3d(0,0,0); }
+
+/* PROFILE PAGE */
+body #booked-profile-page { position:relative; margin:0 0 30px; }
+body #booked-profile-page .booked-profile-header { border:1px solid #ddd; -moz-border-radius:3px 3px 0 0; -webkit-border-radius:3px 3px 0 0; border-radius:3px 3px 0 0; padding:15px; position:relative; }
+body #booked-profile-page .booked-profile-header .booked-logout-button { font-size:13px; position:relative; top:-1px; }
+body #booked-profile-page .booked-user-avatar { width:35px; height:35px; position:relative; top:0; left:0; float:left; display:inline-block; }
+body #booked-profile-page .booked-user-avatar img { width:100%; height:auto; display:block; margin:0; -moz-border-radius:20px; -webkit-border-radius:20px; border-radius:20px; }
+body #booked-profile-page .booked-info { width:100%; }
+body #booked-profile-page .booked-user * { margin:0; padding:0; line-height:1.6; }
+body #booked-profile-page .booked-user h3 { color:#fff; margin:0; padding:4px 0 4px 12px; float:left; display:inline-block; font-size:17px; }
+body #booked-profile-page .booked-user h3 a { text-decoration:none; }
+body #booked-profile-page .booked-user h3 a:hover { color:#fff; }
+body #booked-profile-page .booked-counts { float:right; width:25%; margin-left:5%; }
+body #booked-profile-page .booked-counts span { display:block; text-align:right; font-size:12px; line-height:2.1; }
+body #booked-profile-page .booked-counts i.fa { display:inline-block; padding-right:7px; }
+body #booked-profile-page .booked-tabs { border-width:1px; border-style:solid; border-top:0; border-bottom:0; list-style:none; margin:0; padding:0; }
+body #booked-profile-page .booked-tabs li { float:left; display:inline-block; margin:0; padding:0; }
+body #booked-profile-page .booked-tabs li a { font-size:14px; border-right-width:1px; border-right-style:solid; display:block; text-decoration:none; padding:0 15px; line-height:40px; }
+body #booked-profile-page .booked-tabs li a i.fa { display:inline-block; padding-right:7px; }
+body #booked-profile-page .booked-tab-content { -moz-border-radius:0 0 3px 3px; -webkit-border-radius:0 0 3px 3px; border-radius:0 0 3px 3px; display:none; padding:30px 35px 30px 35px; border-width:1px; border-style:solid; border-top:none; }
+body #booked-profile-page .booked-tabs.login { border-top-width:1px; border-top-style:solid; }
+
+/* Profile Colors */
+body #booked-profile-page .booked-tabs li a { background:rgba(0,0,0,0.15); }
+body #booked-profile-page .booked-tabs li a:hover { background:rgba(0,0,0,0.25); }
+body #booked-profile-page .booked-tabs li a { color: #fff; }
+body #booked-profile-page .booked-tabs li a:hover { color: #fff; }
+body #booked-profile-page .booked-tab-content { border-color:#ddd; background:#fff; }
+body #booked-profile-page .booked-counts,
+body #booked-profile-page .booked-tabs li.active a,
+body #booked-profile-page .booked-tabs li.active a:hover { color: #fff; }
+body #booked-profile-page .booked-tabs li a { border:none; }
+
+body #booked-profile-page p.booked-no-margin { color:#888; margin:0; }
+
+body #booked-profile-page .booked-show-cf { outline:none; font-weight:600; }
+body #booked-profile-page .booked-show-cf.booked-cf-active { color:#000; }
+
+body #booked-profile-page .cf-meta-values-hidden { animation: booked-popdown 0.2s; -webkit-animation: booked-popdown 0.2s; -moz-animation: booked-popdown 0.2s; -ms-animation: booked-popdown 0.2s; -o-animation: booked-popdown 0.2s; display:none; border-left: 3px solid #ddd; margin: 10px 0 0 0px; padding: 0 0 0 20px; }
+body #booked-profile-page .cf-meta-values-hidden p { margin:0 0 10px; font-size:14px; font-weight:300; line-height: 1.5; }
+body #booked-profile-page .cf-meta-values-hidden p:last-child { margin-bottom:0; }
+body #booked-profile-page .cf-meta-values-hidden p strong { font-weight:600; }
+
+body #booked-profile-page .result-section.table-layout { margin:0; }
+body #booked-profile-page .result-section.table-layout .table-box { border:none; }
+body #booked-profile-page .result-section.table-layout .table-box .table-body .table-row { min-height:115px; }
+body #booked-profile-page .result-section.table-layout .table-box .table-body .cell-title { font-weight:normal; font-size:15px; line-height:1.6 }
+body #booked-profile-page .result-section.table-layout .table-box .table-body .cell-title p { margin:0; padding:10px 0 0 0; font-size:12px; }
+body #booked-profile-page .result-section.table-layout .table-box .table-body .cell-title small { display:block; padding-top:5px; }
+body #booked-profile-page .result-section.table-layout .table-box .table-body .cell-title a { font-weight:600; }
+body #booked-profile-page .result-section.table-layout .table-box .table-head-row { background:none !important; }
+body #booked-profile-page .result-section.table-layout .table-box .table-cell { padding:20px 0; }
+body #booked-profile-page .result-section.table-layout .table-box .cell-title { position:relative; width:55%; padding-right:25px; }
+body #booked-profile-page .result-section.table-layout .table-box .cell-title .compact-img img { width:65px; height:auto; position:absolute; -moz-border-radius:3px; -webkit-border-radius:3px; border-radius:3px; top:26px; left:0; }
+body #booked-profile-page .result-section.table-layout .table-box .cell-title .cell-title-wrap { padding-left:85px; }
+body #booked-profile-page .result-section.table-layout .table-box .cell-rating { width:20%; }
+body #booked-profile-page .result-section.table-layout .table-box .cell-time { width:25%; }
+body #booked-profile-page .result-section.table-layout .table-box .cell-title.reviews { width:100%; padding-right:0; }
+body #booked-profile-page .result-section.table-layout .table-box .cell-title.reviews .rating { margin-top:10px; }
+body #booked-profile-page .result-section.table-layout .table-box .table-body .cell-title .booked-review p { font-size:14px; line-height:1.7; }
+
+/* BOOKED LOGIN */
+body #booked-page-form .booked-form-wrap { padding:10px 0; }
+body #booked-page-form input[type=submit] { margin:0; }
+body #booked-page-form input[type=text],
+body #booked-page-form input[type=password],
+body #booked-page-form input[type=email],
+body #booked-page-form textarea { margin:7px 0 0 0; border-width:1px; border-style:solid; padding:10px 12px; width:100%; -moz-box-sizing:border-box; box-sizing:border-box; }
+body #booked-page-form input:disabled,
+body #booked-page-form textarea:disabled { background:#f9f9f9; color:#bbb; border:1px dotted #ccc; }
+body #booked-page-form input[type=file]:disabled { background:#fff; border:none; }
+body #booked-page-form label .not-bold { font-weight:400; color:#ccc; padding:0 0 0 5px; }
+body #booked-page-form p { margin:0 0 15px; }
+body #booked-page-form .login-remember { float:left; margin:2px 0 0 0; }
+body #booked-page-form .login-remember input { margin: 0 4px 0 0; position: relative; top: -1px; }
+body #booked-page-form .login-submit { float:right; margin:0; }
+body #booked-page-form .login-submit input { margin:0; }
+
+body #profile-edit #booked-page-form { border-top:1px solid #ddd; padding-top:20px; }
+body #profile-edit #booked-page-form input[type=file] { display:inline-block; padding:0; }
+body #profile-edit #booked-page-form label { font-weight:600; }
+body #profile-edit #booked-page-form p.form-nickname,
+body #profile-edit #booked-page-form p.form-email,
+body #profile-edit #booked-page-form p.form-url { float:left; width:100%; margin:0 0 25px; }
+body #profile-edit #booked-page-form p.form-password { float:left; width:48%; margin:0 4% 25px 0; }
+body #profile-edit #booked-page-form p.form-password.last { margin:0 0 25px; }
+body #profile-edit #booked-page-form p.form-textarea,
+body #profile-edit #booked-page-form p.form-avatar,
+body #profile-edit #booked-page-form p.form-submit { float:none; width:100%; margin:0 0 25px; }
+body #profile-edit #booked-page-form p.form-submit { margin:0 0 5px; }
+body #profile-edit #booked-page-form .hint-p { font-size: 12px; color: #aaa; padding-top: 5px; display: block; font-style: italic; }
+body #profile-login label, #profile-register label, #profile-forgot label { font-weight:600; }
+
+body .booked-upload-wrap,
+body .booked-upload-wrap input { background: #f5f5f5; border:1px solid #ddd; display:block; height: 35px; width:100%; cursor:pointer; -moz-border-radius:3px; -webkit-border-radius:3px; border-radius:3px; position:relative; }
+body .booked-upload-wrap { width: 100%; margin:10px 0 4px; }
+body #booked-submit-recipe-form .booked-upload-wrap { width:100%; margin:0; }
+
+body .booked-upload-wrap:hover { background:#eee; }
+body .booked-upload-wrap span { color:#888; font-size:13px; text-align:center; height:24px; width:100%; position:absolute; left:0; top:50%; margin-top:-12px; display:block; z-index:1; }
+body .booked-upload-wrap input { z-index:2; opacity:0; }
+
+body .booked-upload-wrap.hasFile { background:#f9f9f9; border:1px solid #ccc; color:#666; }
+body #booked-submit-recipe-form .booked-upload-wrap.hasFile { width:100%; }
+
+body .booked-upload-wrap.hasFile span { color:#000; }
+
+body .booked-custom-error { display:none; margin:0 0 20px; padding:5px 10px; background:#fff0f0; border:1px solid #e3c3c3; -moz-border-radius:3px; -webkit-border-radius:3px; border-radius:3px; }
+body .booked-custom-error.not-hidden { display:block; }
+
+body #booked-plugin-page p.booked-form-notice,
+body #booked-profile-page p.booked-form-notice { border:1px solid #E6DB55; border-radius:3px; background-color: #FFFBCC; margin:0 0 35px; padding: 10px 15px; }
+
+body #booked-profile-page .booked-profile-appt-list,
+body #booked-profile-page #profile-edit { box-sizing:border-box; }
+
+body #booked-profile-page h4 { margin:0 0 20px; padding:0; font-size:19px; font-weight:600; }
+body #booked-profile-page .booked-tabs li.edit-button { float:right; }
+
+body #booked-profile-page .booked-profile-appt-list .appt-block { color:#888; line-height:23px; padding:20px 0 25px; border-top:1px solid #ddd; display:block; }
+body #booked-profile-page .booked-profile-appt-list .appt-block > i.fa { width:23px; color:#333; }
+body #booked-profile-page .booked-profile-appt-list .appt-block:last-child { padding-bottom:0; }
+body #booked-profile-page .booked-profile-appt-list .appt-block .status-block { -moz-border-radius:3px; -webkit-border-radius:3px; border-radius:3px; font-size:12px; text-transform:uppercase; font-weight:bold; float:right; padding:0 12px 1px; line-height:33px; margin:6px 0 0 0; background:#ccc; color:#fff; }
+body #booked-profile-page .booked-profile-appt-list .appt-block.approved { color:#000; }
+body #booked-profile-page .booked-profile-appt-list .appt-block button { float:right; margin:6px 0 0 0; }
+body #booked-profile-page .booked-profile-appt-list .appt-block .cancel { color:#aaa; font-size:12px; padding-left:10px; }
+body #booked-profile-page .booked-profile-appt-list .appt-block .booked-cal-buttons { display:block; padding:15px 0 0 0; }
+body #booked-profile-page .booked-profile-appt-list .appt-block .booked-cal-buttons a { text-decoration:none; display:inline-block; padding:2px 7px; margin:0 7px 0 0; -moz-border-radius:3px; -webkit-border-radius:3px; border-radius:3px; line-height:20px; font-size:12px; font-weight:400; }
+body #booked-profile-page .booked-profile-appt-list .appt-block .booked-cal-buttons a:hover { text-decoration:none; }
+body #booked-profile-page .booked-profile-appt-list .appt-block .booked-cal-buttons .google-cal-button > a { font-size:11px; font-weight:600; text-transform:uppercase; padding:2px 9px; letter-spacing:1px; border-width:1px; border-style:solid; color:#fff; }
+body #booked-profile-page .booked-profile-appt-list .appt-block .booked-cal-buttons a,
+body #booked-profile-page .booked-profile-appt-list .appt-block .booked-cal-buttons span { float:left; }
+
+body #booked-profile-page .addtocalendar var { display: none; }
+body #booked-profile-page .addtocalendar { position: relative; display: inline-block; }
+body #booked-profile-page .atcb-link { display: block; outline: none!important; cursor: pointer; }
+body #booked-profile-page .atcb-link:focus~ul,
+body #booked-profile-page .atcb-link:active~ul,
+body #booked-profile-page .atcb-list:hover{ visibility:visible; }
+body #booked-profile-page .atcb-list { box-shadow:0 1px 25px rgba(0,0,0,0.20); visibility: hidden; position: absolute; top: 100%; left: 0; width: 170px; z-index: 900; }
+body #booked-profile-page .atcb-list,
+body #booked-profile-page .atcb-item { list-style: none; margin: 0; padding: 0; }
+body #booked-profile-page .atcb-item { float: none; text-align: left; }
+body #booked-profile-page .booked-profile-appt-list .appt-block .booked-cal-buttons a.atcb-item-link { box-sizing:border-box; text-decoration: none; outline: none; display: block; color:#aaa; background:#f9f9f9; -moz-border-radius:0; -webkit-border-radius:0; border-radius:0; margin:0; width:100%; padding:3px 12px; display:block; }
+body #booked-profile-page .booked-profile-appt-list .appt-block .booked-cal-buttons a.atcb-item-link:hover { color:#555; }
+body #booked-profile-page .booked-profile-appt-list .appt-block .booked-cal-buttons .atcb-list li:first-child a.atcb-item-link { padding-top:10px; }
+body #booked-profile-page .booked-profile-appt-list .appt-block .booked-cal-buttons .atcb-list li:last-child a.atcb-item-link { padding-bottom:10px; -moz-border-radius:0 0 3px 3px; -webkit-border-radius:0 0 3px 3px; border-radius:0 0 3px 3px; }
+body #booked-profile-page .atcb-item.hover,
+body #booked-profile-page .atcb-item:hover { position: relative; z-index: 900; cursor: pointer; text-decoration: none; outline: none; }
+
+body #booked-profile-page .booked-profile-appt-list .appt-block .cancel { border:1px solid #ddd; background:#f5f5f5; color:#aaa; }
+body #booked-profile-page .booked-profile-appt-list .appt-block .cancel:hover { background:#eee; color:#888; border-color:#ccc; }
+body #booked-profile-page .booked-profile-appt-list .calendar-name { padding:0 0 5px; }
+
+/* CUSTOM DATE PICKER STYLING */
+.booked-list-date-picker-wrap { width:100%; position:absolute; text-align:center; top:30px; left:0; }
+#ui-datepicker-div.booked_custom_date_picker { animation: booked-popflyin 0.15s; -webkit-animation: booked-popflyin 0.15s; -moz-animation: booked-popflyin 0.15s; -ms-animation: booked-popflyin 0.15s; -o-animation: booked-popflyin 0.15s; background:#fff; margin-top:37px; margin-left:-107px; width:230px; border:1px solid #d5d5d5; padding:8px; -moz-border-radius:3px; -webkit-border-radius:3px; border-radius:3px; box-shadow:0 1px 4px rgba(0,0,0,0.15); z-index:9999 !important; }
+#ui-datepicker-div.booked_custom_date_picker .ui-datepicker-header { position:relative; background:#365769; color:#fff; }
+#ui-datepicker-div.booked_custom_date_picker .ui-datepicker-header .ui-datepicker-prev,
+#ui-datepicker-div.booked_custom_date_picker .ui-datepicker-header .ui-datepicker-next { cursor:pointer; top:9px; font-size:16px; position:absolute; display: inline-block; font-family:FontAwesome; text-rendering: auto; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; transform: translate(0, 0); color:#fff; }
+#ui-datepicker-div.booked_custom_date_picker .ui-datepicker-header .ui-datepicker-prev .ui-icon,
+#ui-datepicker-div.booked_custom_date_picker .ui-datepicker-header .ui-datepicker-next .ui-icon { display:none; }
+#ui-datepicker-div.booked_custom_date_picker .ui-datepicker-header .ui-datepicker-prev { left:9px; }
+#ui-datepicker-div.booked_custom_date_picker .ui-datepicker-header .ui-datepicker-next { right:9px; }
+#ui-datepicker-div.booked_custom_date_picker .ui-datepicker-header .ui-datepicker-title { text-transform:uppercase; padding:9px 0 10px; text-align:center; }
+#ui-datepicker-div.booked_custom_date_picker .ui-datepicker-header .ui-datepicker-prev:hover,
+#ui-datepicker-div.booked_custom_date_picker .ui-datepicker-header .ui-datepicker-next:hover { opacity:0.7; }
+#ui-datepicker-div.booked_custom_date_picker .ui-datepicker-header .ui-datepicker-prev:before { content: "\f060"; }
+#ui-datepicker-div.booked_custom_date_picker .ui-datepicker-header .ui-datepicker-next:before { content: "\f061"; }
+#ui-datepicker-div.booked_custom_date_picker table.ui-datepicker-calendar { width:100%; border-collapse: collapse; }
+#ui-datepicker-div.booked_custom_date_picker table.ui-datepicker-calendar thead, #ui-datepicker-div.booked_custom_date_picker table.ui-datepicker-calendar thead th { font-size:11px; font-weight:normal; background:#213946; color:#fff; }
+#ui-datepicker-div.booked_custom_date_picker table.ui-datepicker-calendar thead th { width:14.285%; text-align:center; padding:5px 0; }
+#ui-datepicker-div.booked_custom_date_picker table.ui-datepicker-calendar tbody { border-top:8px solid #fff; }
+#ui-datepicker-div.booked_custom_date_picker table.ui-datepicker-calendar tbody, #ui-datepicker-div.booked_custom_date_picker table.ui-datepicker-calendar tbody td { font-size:12px; font-weight:normal; background:#fff; color:#888; }
+#ui-datepicker-div.booked_custom_date_picker table.ui-datepicker-calendar tbody td { text-align:center; padding:0px; }
+#ui-datepicker-div.booked_custom_date_picker table.ui-datepicker-calendar tbody td a { display:block; -moz-border-radius:3px; -webkit-border-radius:3px; border-radius:3px; line-height:33px; text-decoration:none; color:#333; }
+#ui-datepicker-div.booked_custom_date_picker table.ui-datepicker-calendar tbody td a:hover { background:#eee; }
+#ui-datepicker-div.booked_custom_date_picker table.ui-datepicker-calendar tbody td span { display:block; line-height:33px;  }
+#ui-datepicker-div.booked_custom_date_picker table.ui-datepicker-calendar tbody td.ui-datepicker-unselectable span { color:#ddd; }
+#ui-datepicker-div.booked_custom_date_picker table.ui-datepicker-calendar tbody td.ui-datepicker-week-end a { color:#888; }
+#ui-datepicker-div.booked_custom_date_picker table.ui-datepicker-calendar tbody td.ui-datepicker-today a { background:#F0FAFF; color:#6DC3EE; }
+#ui-datepicker-div.booked_custom_date_picker table.ui-datepicker-calendar tbody td.ui-datepicker-today a:hover { background:#DCEFF8; }
+#ui-datepicker-div.booked_custom_date_picker table.ui-datepicker-calendar tbody td a.ui-state-active, #ui-datepicker-div.booked_custom_date_picker table.ui-datepicker-calendar tbody td a.ui-state-active:hover { background:#fff1cc; color:#bf9931; }
+/* END CUSTOM DATE PICKER STYLING */
+
+/* Page Form Colors */
+body #booked-page-form input[type=email],
+body #booked-page-form input[type=text],
+body #booked-page-form input[type=password],
+body #booked-page-form textarea,
+body #booked-page-form { border-color: #ccc; color: #888; line-height: 1.5; font-size: 13px; }
+
+/* ANIMATION */
+body .booked-calendar-wrap {
+	-webkit-transition: height .15s ease-out;
+	-moz-transition: height .15s ease-out;
+	-o-transition: height .15s ease-out;
+	transition: height .15s ease-out;
+}
+
+body table.booked-calendar td .count,
+body table.booked-calendar thead th a,
+body .booked-appt-list .timeslot .timeslot-time,
+body .booked-appt-list .timeslot .timeslot-people,
+body .booked-appt-list .timeslot,
+body #booked-profile-page .booked-profile-appt-list .appt-block .booked-cal-buttons a,
+body #booked-profile-page .booked-show-cf,
+body .booked-list-view a.booked_list_date_picker_trigger {
+	-webkit-transition: all .1s ease-out;
+	-moz-transition: all .1s ease-out;
+	-o-transition: all .1s ease-out;
+	transition: all .1s ease-out;
+}
+
+body table.booked-calendar td .date,
+body table.booked-calendar td .date span {
+	-webkit-transition: background .15s ease-out, color .15s ease-out;
+	-moz-transition: background .15s ease-out, color .15s ease-out;
+	-o-transition: background .15s ease-out, color .15s ease-out;
+	transition: background .15s ease-out, color .15s ease-out;
+}
+
+body .booked-list-view .booked-appt-list {
+	-webkit-transition: opacity .2s ease-out;
+	-moz-transition: opacity .2s ease-out;
+	-o-transition: opacity .2s ease-out;
+	transition: opacity .2s ease-out;
+}
+
+body .booked-appt-list {
+	-webkit-transition: transform .4s ease-in-out;
+	-moz-transition: transform .4s ease-in-out;
+	-o-transition: transform .4s ease-in-out;
+	transition: transform .4s ease-in-out;
+}
