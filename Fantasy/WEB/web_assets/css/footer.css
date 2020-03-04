@@ -1,0 +1,94 @@
+/* footer css starts here */
+.footer_top{background: #373737; color: #fff; padding-top: 62px;}
+.footer_inner{display: grid; grid-template-columns: 1.5fr 1fr; grid-template-rows: auto;}
+.footer_social ul{margin-top: 12px; margin-bottom: 0px; padding-left: 0px; display: inline-block;}
+.footer_social ul li{float: left; list-style: none;margin-right: 16px;}
+.footer_social ul li:last-child{margin-right: 0px;}
+.col2{display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); grid-template-rows: auto;}
+.col1{display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); grid-template-rows: auto; border-right: 1px solid #828282;}
+.right_col1{display: grid; grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); grid-template-rows: auto;}
+.left_link_list ul, .right_link_list ul{padding-left: 0px; list-style: none; margin-top: 0px; margin-bottom: 0px; display: inline-block;}
+.left_link_list ul li a, .right_link_list ul li a{font-size: 14px; font-weight: 600; font-family: Montserrat; font-style: normal; font-stretch: normal; letter-spacing: normal; text-align: left; color: #ffffff; text-decoration: none;margin-bottom: 25px; display: inline-block;}
+.membership{padding-left: 20px;}
+.membership ul{list-style: none; margin-top: 0px; margin-bottom: 0px; padding-left: 0px; display: inline-block;}
+.membership ul li{float: left; margin-right: 17px;}
+.membership ul li:last-child{margin-right: 0px;}
+.membership h3, .our_apps h3,  .sports_partners h3{font-family: Montserrat; font-size: 14px; font-weight: 600; font-style: normal; font-stretch: normal; line-height: normal; letter-spacing: normal; color: #ffffff; margin-top: 0px; margin-bottom: 27px;}
+.office_address h3{font-family: Montserrat; font-size: 14px; font-weight: 600; font-style: normal; font-stretch: normal; line-height: normal; letter-spacing: normal; color: #ffffff; margin-top: 0px; text-align: center;}
+.app_list { text-align: left; padding-left: 0; margin: 0; list-style: none;}
+.app_list li {margin-bottom: 10px;}
+.app_list li a {font-size: 16px;color: #fff;font-family: Arial; text-decoration: none;}
+.ios a:before { width: 13px; background: url(../images/apple-icon.png) no-repeat; background-size: 100%;}
+.android a:before { width: 14px; background: url(../images/android-icon.png) no-repeat; background-size: 100%;}
+.android a:before, .ios a:before { margin-right: 8px; float: left; content: ""; height: 16px; display: inline-block;}
+.footer_inner{padding-bottom: 29px;border-bottom: 1px solid #828282}
+.our_apps{ padding-left: 30px;}
+.office_address{padding-top: 16px; text-align: center; padding-bottom: 15px;}
+.office_address h3{margin-bottom: 8px;}
+.address{ font-family: Helvetica;font-size: 14px; font-weight: normal; font-style: normal; font-stretch: normal; line-height: 1.57; letter-spacing: normal; color: #ffffff; padding: 0 10px;}
+.footer_bottom{ background: #282828; padding-top: 25px; padding-bottom: 25px; text-align: center;}
+.footer_bottom ul {margin-top: 0px; margin-bottom: 0px; display: inline-block; list-style: none; padding-left: 0px; display: inline-block;}
+.footer_bottom ul li{float: left;}
+.footer_bottom ul li a{text-decoration: none;font-size: 16px; font-weight: normal; font-style: normal; font-stretch: normal; line-height: normal; letter-spacing: normal; text-align: center; color: #ffffff; padding-right: 40px; margin-right: 40px; border-right: 1px solid #828282;}
+.footer_bottom ul li:last-child a{ margin-right: 0px; padding-right: 0px; border-right: 0px;}
+.sports_partners{padding-left: 10px;}
+.sports_partners ul li{float: left; margin-right: 20px; text-align: center;}
+.sports_partners ul li img{display: block;}
+.sports_partners ul li span{ display: inline-block; vertical-align: middle; margin-right: 23px;}
+.sports_partners ul li:last-child{margin-right: 0px}
+.sports_partners ul li span:last-child{margin-right: 0px;}
+.step_inner_wrapper{margin-top: 30px;}
+.more_link{display: none;}
+.footer_container{max-width: 1000px; width: 100%; margin: 0 auto;}
+.sports_partners ul{margin: 0px; padding: 0px; list-style: none;}
+.disclaimer_box {padding-bottom: 15px;}
+.disclaimer_box h3 { text-align: center; margin-bottom: 4px; font-size: 10px; color: #929292; font-weight: normal; font-family: Montserrat; margin-top: 0px;}
+.disclaimer { font-size: 10px; max-width: 540px; width: 90%; margin: 0 auto; color: #929292; text-align: center; font-family: Helvetica;}
+.right_link_list {padding-left: 20px;}
+/* footer css ends here */
+
+@media (max-width:900px){
+	.col1{padding-left: 15px;}
+	.left_col1{margin-bottom: 40px}
+	.sports_partners ul li span{margin-right: 10px;}
+}
+
+@media (max-width:768px){
+	/*footer css*/
+	
+	.footer_inner { grid-template-columns: 2fr 1fr; }
+	.col2 { text-align: center;}
+	.membership, .sports_partners {padding-left: 0px; }
+	.sports_partners ul { display: inline-block;}
+	/*footer css*/
+}
+
+@media (max-width:766px){
+	/*mobile_footer*/
+	.footer_inner{grid-template-columns: 1fr;padding-bottom: 0px;}
+	.footer_top{padding-top: 20px;}
+	.footer_logo img{margin: 0 auto;}
+	.col1{border-right: 0px;}
+	.footer_social{text-align: center;}
+	.left_col1{border-bottom: 1px solid #828282; padding-bottom: 23px; margin-bottom: 13px; text-align: center;}
+	.right_col1{text-align: center;}
+	.col2{text-align: center;}
+	.membership h3, .our_apps h3, .sports_partners h3{text-align: center; margin-bottom: 14px;}
+	.membership,  .sports_partners{margin-bottom: 40px;}
+	.sports_partners ul{display: inline-block;}
+	.sports_partners{padding-left: 0px;}
+	.our_apps{text-align: center; padding-left: 0px;}
+	.app_list li{text-align: center; float: left; margin-right: 10px; }
+	.app_list li:last-child{margin-right: 0px;}
+	.app_list{display: inline-block;}
+	.footer_bottom ul{display: inline-block;}
+	.footer_bottom{text-align: center;}
+	.footer_bottom ul li a{padding-right: 10px; margin-right: 10px;}
+	.footer_bottom ul li:nth-child(3) a {padding-right: 0px;border-right: 0px;margin-right: 0px;}
+	.footer_bottom ul li:last-child { clear: both; width: 100%; margin-top: 20px;}
+	.more_link{display: block;}
+	.col2{grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));}
+	.membership{padding-left: 0px;}
+	.col1{padding-left: 0px;}
+	/*mobile footer*/
+}

@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:background="@color/white"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="2dp"
+        android:padding="5dp"
+        android:id="@+id/RL_PlayerListMain"
+        android:elevation="0dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/tv_TeamNumber"
+
+            android:visibility="invisible"/>
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/ground11"
+            android:layout_centerVertical="true"
+            android:id="@+id/im_PlayerImage"/>
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:id="@+id/RL_Name"
+            android:layout_toRightOf="@+id/im_PlayerImage"
+            android:layout_marginLeft="10dp">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Player Name"
+                android:id="@+id/tv_PlayerName"
+                android:textColor="#1e1e1e"
+                />
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center"
+                android:layout_below="@+id/tv_PlayerName">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="IND"
+                    android:layout_gravity="center"
+                    android:layout_marginRight="5dp"
+                    android:id="@+id/tv_PlayerTeamName"
+                    android:textColor="#1e1e1e"
+                    />
+                <View
+                    android:layout_width="1dp"
+                    android:layout_height="10dp"
+                    android:layout_gravity="center"
+                    android:visibility="invisible"
+                    android:background="#8e8e8e"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="55 Points"
+                    android:layout_gravity="center"
+                    android:id="@+id/tv_PlayerPoints"
+                    android:textColor="#8e8e8e"
+                    android:visibility="invisible"
+                    android:layout_marginLeft="5dp"
+                    />
+            </LinearLayout>
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:id="@+id/RL_Credit"
+            android:layout_alignParentRight="true">
+            <TextView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:text="C"
+                android:padding="10dp"
+                android:textAlignment="center"
+                android:gravity="center"
+                android:visibility="gone"
+                android:layout_centerVertical="true"
+                android:background="@drawable/circle_captain_vc_back"
+                android:id="@+id/tv_SelectCaptain"
+                android:textColor="#1e1e1e"
+                android:layout_marginLeft="10dp"
+                />
+
+            <CheckBox
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_toRightOf="@+id/tv_SelectViceCaptain"
+                android:layout_centerVertical="true"
+                android:visibility="visible"
+                android:text="C"
+                android:textColor="@color/colorPrimary"
+                android:gravity="center"
+                android:button="@android:color/transparent"
+                android:background="@drawable/radio_selector"
+                android:id="@+id/checkbox"/>
+            <CheckBox
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_toRightOf="@+id/checkbox"
+                android:layout_centerVertical="true"
+                android:visibility="visible"
+                android:text="VC"
+                android:layout_marginLeft="5dp"
+                android:textColor="@color/colorPrimary"
+                android:gravity="center"
+                android:button="@android:color/transparent"
+                android:background="@drawable/radio_vc_selector"
+                android:id="@+id/checkbox2"/>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/onex_icon"
+                android:visibility="invisible"
+                android:layout_centerHorizontal="true"
+                android:id="@+id/im_onetwox"
+                />
+
+            <RadioGroup
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/radiogroup"
+                android:visibility="gone"
+                android:layout_marginTop="10dp"
+                android:layout_below="@+id/im_onetwox"
+                android:orientation="horizontal">
+                <RadioButton
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_toRightOf="@+id/tv_SelectViceCaptain"
+                    android:layout_centerVertical="true"
+                    android:visibility="visible"
+                    android:text="C"
+                    android:layout_marginRight="10dp"
+                    android:gravity="center"
+                    android:background="@drawable/radio_selector"
+                    android:button="@android:color/transparent"
+                    android:id="@+id/radio"/>
+                <RadioButton
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_toRightOf="@+id/checkbox"
+                    android:layout_centerVertical="true"
+                    android:visibility="visible"
+                    android:text="VC"
+                    android:gravity="center"
+                    android:background="@drawable/radio_vc_selector"
+                    android:button="@android:color/transparent"
+                    android:id="@+id/radio2"/>
+            </RadioGroup>
+
+
+
+            <TextView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:text="VC"
+                android:textAlignment="center"
+                android:gravity="center"
+                android:visibility="gone"
+                android:padding="10dp"
+                android:layout_toRightOf="@+id/tv_SelectCaptain"
+                android:layout_centerVertical="true"
+                android:background="@drawable/circle_captain_vc_back"
+                android:id="@+id/tv_SelectViceCaptain"
+                android:textColor="#1e1e1e"
+                android:layout_marginLeft="10dp"
+                />
+
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#8e8e8e"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="2dp"
+        android:layout_marginRight="5dp"
+        android:layout_marginLeft="5dp"
+        android:layout_below="@+id/RL_PlayerListMain"/>
+
+</RelativeLayout>

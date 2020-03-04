@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#F80B5B</color>
+    <color name="colorPrimaryDark">#FFD010</color>
+    <color name="colorAccent">#FFD010</color>
+    <color name="white">#ffffff</color>
+    <color name="black">#000000</color>
+    <color name="tabtextselected">#ffff0000</color>
+
+    <color name="tabtextselected2">#02b9aa</color>
+    <color name="tabtextunselectednew">#ffff0000</color>
+    <color name="tabtextunselected">#626262</color>
+    <color name="sixtwo">#626262</color>
+    <color name="eightE">#8e8e8e</color>
+    <color name="myteamCaptain">#ff5050</color>
+    <color name="myteamVCaptain">#02bcae</color>
+    <color name="myteamdivider">#dbdbdb</color>
+    <color name="red">#ffff0000</color>
+</resources>

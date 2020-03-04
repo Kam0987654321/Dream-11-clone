@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/LL_GroundPlayer"
+        >
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_centerHorizontal="true"
+            android:scaleType="fitCenter"
+            android:layout_marginTop="10dp"
+            android:id="@+id/im_GroundPlayerImage"/>
+        <TextView
+            android:id="@+id/tv_CorVC"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:background="@drawable/circle"
+            android:padding="5dp"
+            android:text=""
+            android:textColor="@color/white"
+            android:textSize="10sp"
+            android:visibility="gone" />
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:layout_below="@+id/im_GroundPlayerImage"
+            android:padding="3dp"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:id="@+id/tv_GroundPlayerName"
+                android:textColor="@color/white"
+                android:background="@drawable/joinbutton_hover"
+                android:drawableTint="#4766cb"
+                android:layout_marginTop="5dp"
+                android:textSize="10sp"
+                android:padding="3dp"
+                android:layout_gravity="center"
+                android:text="Player Name"
+                android:maxLines="1"
+                android:maxLength="10"
+                android:ellipsize="end"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:id="@+id/tv_GroundPlayerCredit"
+                android:textColor="@color/white"
+                android:layout_marginTop="2dp"
+                android:textSize="10sp"
+                android:padding="3dp"
+                android:ellipsize="end"
+                android:layout_gravity="center"
+                android:text="8 Cr"/>
+
+
+        </LinearLayout>
+
+    </RelativeLayout>
+</RelativeLayout>

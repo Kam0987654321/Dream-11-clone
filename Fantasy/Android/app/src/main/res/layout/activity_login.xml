@@ -1,0 +1,260 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/RL_Login">
+    <include
+        layout="@layout/activity_mainheader"
+        android:id="@+id/Head"
+        />
+
+    <com.facebook.login.widget.LoginButton
+        android:id="@+id/fb_login_button"
+        android:layout_width="200sp"
+        android:visibility="invisible"
+        android:layout_height="wrap_content"
+        />
+    <com.google.android.gms.common.SignInButton
+        android:id="@+id/btn_sign_in"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="invisible"
+        android:layout_marginBottom="20dp"/>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/Head"
+        android:visibility="visible"
+        android:id="@+id/RL_EnterEmail"
+        android:layout_marginTop="10dp">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/RL_FaceGoogle"
+        android:layout_marginTop="20dp"
+        >
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="2"
+        android:id="@+id/LL_FaceGoogle">
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_weight="1">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Facebook"
+            android:textColor="#3c5a9a"
+            android:drawablePadding="10dp"
+            android:id="@+id/tv_LFacebookLogin"
+            android:drawableTop="@drawable/facebook_icon"
+            android:gravity="center"
+            />
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_weight="1">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Google"
+            android:drawablePadding="10dp"
+            android:textColor="#ababab"
+            android:id="@+id/tv_LGoogleLogin"
+            android:drawableTop="@drawable/google_icon"
+            android:gravity="center"
+            />
+    </RelativeLayout>
+    </LinearLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:padding="10dp"
+        android:layout_below="@+id/LL_FaceGoogle"
+        android:layout_marginTop="20dp"
+        >
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/or"
+            android:layout_centerHorizontal="true"/>
+
+    </RelativeLayout>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/RL_FaceGoogle"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginLeft="20dp">
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/input_loginEmail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:hintEnabled="false"
+            >
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/et_EmailMobile"
+                android:hint="Email or mobile no."
+                android:singleLine="true"
+                android:textSize="14sp"
+                android:textColorHint="#626262"
+                android:layout_centerHorizontal="true"
+                android:background="@drawable/edittext_back"
+                android:padding="12dp" />
+        </android.support.design.widget.TextInputLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="NEXT"
+            android:textAlignment="center"
+            android:gravity="center"
+            android:padding="12dp"
+            android:layout_below="@+id/input_loginEmail"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/dark_rectangle"
+            android:elevation="2dp"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            android:id="@+id/tv_LoginNext"
+            />
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_centerHorizontal="true"
+            android:id="@+id/LL_LRegister"
+            android:layout_below="@+id/tv_LoginNext"
+            android:layout_marginTop="10dp">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Not a member? "
+            android:textColor="#858585"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Register"
+            android:textStyle="bold"
+            android:textColor="@color/colorPrimary"/>
+        </LinearLayout>
+    </RelativeLayout>
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/Head"
+        android:visibility="gone"
+        android:id="@+id/RL_EnterPassword"
+        android:layout_marginTop="20dp">
+             <TextView
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:text="Yourmail@mail.com"
+                 android:id="@+id/tv_UserEmailMob"
+                 android:textColor="#626262"
+                 android:layout_centerHorizontal="true"
+                 android:gravity="center"
+                 />
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_UserEmailMob"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginLeft="20dp">
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/input_loginPassword"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:hintEnabled="false"
+                app:passwordToggleEnabled="true"
+
+                >
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/et_Password"
+                    android:hint="Enter Password"
+                    android:singleLine="true"
+                    android:textColorHint="#626262"
+                    android:textSize="14sp"
+                    android:inputType="textPassword"
+                    android:layout_centerHorizontal="true"
+                    android:background="@drawable/edittext_back"
+                    android:padding="12dp" />
+            </android.support.design.widget.TextInputLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="LOG IN"
+                android:textAlignment="center"
+                android:gravity="center"
+                android:padding="12dp"
+                android:layout_below="@+id/input_loginPassword"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/dark_rectangle"
+                android:elevation="3dp"
+                android:textColor="@color/white"
+                android:textSize="16sp"
+                android:id="@+id/tv_Login"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Forgot Password?"
+                android:id="@+id/tv_ForgotPassword"
+                android:textStyle="bold"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@+id/tv_Login"
+                android:layout_marginTop="30dp"
+                android:textColor="@color/colorPrimary"/>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:visibility="gone"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@+id/tv_ForgotPassword"
+                android:layout_marginTop="20dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Log In using "
+                    android:textColor="#626262"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="mobile number"
+                    android:textStyle="bold"
+                    android:textColor="@color/colorPrimary"/>
+            </LinearLayout>
+        </RelativeLayout>
+    </RelativeLayout>
+
+
+
+
+
+</RelativeLayout>

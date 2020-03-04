@@ -1,0 +1,28 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ababab"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context="com.indian11.app.FragmentBottomMenu.MyContestFragment">
+    <android.support.design.widget.TabLayout
+        android:id="@+id/FragmentMyTab"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:tabMode="fixed"
+        android:background="#ffffff"
+        app:tabIndicatorColor="@color/red"
+        android:elevation="3dp"
+        app:tabTextAppearance="@style/MyTabLayoutTextAppearance"
+        app:tabSelectedTextColor="@color/red"
+        app:tabTextColor="@color/red"
+        app:tabGravity="fill"/>
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/myviewpager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/FragmentMyTab"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"  />
+
+</RelativeLayout>

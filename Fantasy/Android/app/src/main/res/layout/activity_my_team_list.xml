@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff">
+    <include
+        layout="@layout/activity_mainheader"
+        android:id="@+id/head"/>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/rectangle_gradient"
+        android:id="@+id/RL_MyTeamHead"
+        android:layout_below="@+id/head">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="8dp"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/white_rectangle">
+
+            <TextView
+                android:id="@+id/tv_MyTeamsMatchName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_toLeftOf="@+id/tv_MyTeamMatchTimer"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:padding="10dp"
+                android:text="Team Name"
+                android:textColor="#1e1e1e" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:id="@+id/tv_MyTeamMatchTimer"
+                android:text="Timer"
+                android:drawablePadding="5dp"
+                android:drawableLeft="@drawable/watch_icon_cont"
+                android:drawableTint="#eb4949"
+                android:layout_alignParentRight="true"
+                android:textColor="#eb4949" />
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+    <android.support.v4.widget.SwipeRefreshLayout
+        android:id="@+id/swipeRefreshLayout"
+        android:layout_below="@+id/RL_MyTeamHead"
+        android:layout_above="@+id/RL_BottomCreateTeam"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/Rv_MyTeamList"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="vertical" />
+    </android.support.v4.widget.SwipeRefreshLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="You have not created any team."
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:visibility="gone"
+        android:id="@+id/tv_NoDataAvailable"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:id="@+id/RL_BottomCreateTeam"
+        android:background="@color/white"
+        android:layout_alignParentBottom="true"
+        android:layout_height="wrap_content">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Create New Team"
+            android:id="@+id/tv_MyCreateTeam"
+            android:paddingRight="30dp"
+            android:paddingLeft="30dp"
+            android:paddingTop="10dp"
+            android:textColor="@color/white"
+            android:background="@drawable/dark_rectangle"
+            android:layout_margin="10dp"
+            android:layout_centerHorizontal="true"
+            android:paddingBottom="10dp"/>
+
+    </RelativeLayout>
+
+
+</RelativeLayout>

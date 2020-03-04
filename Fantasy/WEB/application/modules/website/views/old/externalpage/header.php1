@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1" name="viewport"/>
+ <!--  <link href="https://d13ir53smqqeyp.cloudfront.net/contain/marketing/landing_pages/favicon.ico" rel="shortcut icon"/> -->
+  <title><?php echo $title; ?></title>
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet"/>
+  <link href="<?php echo base_url('web_assets/css/master.css')?>" rel="stylesheet"/>
+  <link href="<?php echo base_url('web_assets/css/footer.css');?> " rel="stylesheet"/>
+  <script src="<?php echo base_url('web_assets/js/jquery-3.2.1.js'); ?>"></script>
+</head>
+<body>
+  <div>
+    <header>
+      <div class="container">
+        <div class="hamburger"></div>
+        <div class="cross"></div>
+        <a class="logo" href="<?php echo base_url('website/leagues'); ?>"><img height="100px" width="100px" alt="logo" src="<?php echo base_url('web_assets/image/logo.png');?> "></a>
+        <nav class="menu">
+          <ul>
+           
+            <li id="aboutUs"><a target="_blank" href="<?php echo base_url('website/aboutUs');?> ">ABOUT US</a></li>
+            <li id="how_to_play"><a href="<?php echo base_url('website/how_to_play');?>" target="_blank">HOW TO PLAY</a></li>
+            <li id="termsandconditions"><a href="<?php echo base_url('website/termsandconditions');?> " target="_blank">TERMS AND CONDITIONS</a></li>
+            <li id="pointsystem"><a href="<?php echo base_url('website/pointsystem');?> " target="_blank">POINT SYSTEM</a></li>
+          </ul>
+        </nav>
+        <div class="clr"></div>
+      </div>
+    </header>
+<script type="text/javascript" src="<?php echo base_url('web_assets/js/jquery-3.2.1.js'); ?>"> </script>
+    <script type="text/javascript">
+      $( document ).ready(function() {
+      var id = "<?php echo $this->uri->segment('2')?>";
+
+      $("#"+id).addClass('active');
+});
+    </script>

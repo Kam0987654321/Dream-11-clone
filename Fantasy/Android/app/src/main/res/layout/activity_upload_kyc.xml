@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <include
+        layout="@layout/activity_mainheader"
+        android:id="@+id/head"/>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/head">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="VERIFY YOU PAN"
+            android:layout_centerHorizontal="true"
+            android:textSize="16sp"
+            android:layout_marginTop="10dp"
+            android:id="@+id/tv_VerifyHead"
+            />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:id="@+id/LL_UploadDoc"
+            android:layout_below="@+id/tv_VerifyHead"
+            android:gravity="center"
+            android:paddingTop="15dp"
+            android:paddingBottom="15dp">
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:id="@+id/im_ImagePreview"
+            android:scaleType="fitCenter"
+            android:visibility="gone"
+            android:layout_margin="2dp"
+            android:layout_gravity="center"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Upload"
+            android:textSize="11sp"
+            android:id="@+id/tv_Upload"
+            android:layout_gravity="center"
+            android:background="@drawable/roundbutton_back"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:paddingLeft="30dp"
+            android:paddingRight="30dp"
+            />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/LL_UploadDoc"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:orientation="vertical">
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/input_NameDoc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:hintEnabled="false"
+            >
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/et_DocName"
+                android:hint="Name"
+                android:singleLine="true"
+                android:textColorHint="#626262"
+                android:textSize="14sp"
+                android:layout_centerHorizontal="true"
+                android:background="@drawable/edittext_back"
+                android:padding="12dp" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="As on pan card"
+                android:id="@+id/tv_EtDocNameBottomText"
+                android:textColor="#626262"
+                android:layout_marginTop="5dp"
+                android:textSize="11sp"
+                android:layout_marginBottom="2dp"/>
+        </android.support.design.widget.TextInputLayout>
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/input_DocNumber"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            app:hintEnabled="false"
+            >
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/et_DocNumber"
+                android:hint="PAN Number"
+                android:singleLine="true"
+                android:textColorHint="#626262"
+                android:textSize="14sp"
+                android:layout_centerHorizontal="true"
+                android:background="@drawable/edittext_back"
+                android:padding="12dp" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="10 Digit pan no."
+                android:id="@+id/tv_EtDocNumberBottomText"
+                android:textColor="#626262"
+                android:layout_marginTop="5dp"
+                android:textSize="11sp"
+                android:layout_marginBottom="2dp"/>
+        </android.support.design.widget.TextInputLayout>
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/input_DocDob"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            app:hintEnabled="false"
+            >
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/et_DocDob"
+                android:hint="Date of Birth"
+                android:singleLine="true"
+                android:textColorHint="#626262"
+                android:textSize="14sp"
+                android:focusable="false"
+                android:clickable="true"
+                android:editable="false"
+                android:layout_centerHorizontal="true"
+                android:background="@drawable/edittext_back"
+                android:padding="12dp" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="As on card"
+                android:id="@+id/tv_EtDocDobBottomText"
+                android:textColor="#626262"
+                android:layout_marginTop="5dp"
+                android:textSize="11sp"
+                android:layout_marginBottom="2dp"/>
+        </android.support.design.widget.TextInputLayout>
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/input_DocState"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            app:hintEnabled="false"
+            >
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/et_DocState"
+                android:hint="Enter State"
+                android:singleLine="true"
+                android:textColorHint="#626262"
+                android:textSize="14sp"
+                android:layout_centerHorizontal="true"
+                android:background="@drawable/edittext_back"
+                android:padding="12dp" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Enter your state name"
+                android:id="@+id/tv_EtDocStateBottomText"
+                android:textColor="#626262"
+                android:layout_marginTop="5dp"
+                android:textSize="11sp"
+                android:layout_marginBottom="2dp"/>
+        </android.support.design.widget.TextInputLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Submit for Verification"
+            android:textSize="14sp"
+            android:id="@+id/tv_SubmitForVerification"
+            android:layout_gravity="center"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="20dp"
+            android:background="@drawable/roundbutton_back"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:paddingLeft="30dp"
+            android:paddingRight="30dp"
+            />
+        </LinearLayout>
+    </RelativeLayout>
+    </ScrollView>
+</RelativeLayout>

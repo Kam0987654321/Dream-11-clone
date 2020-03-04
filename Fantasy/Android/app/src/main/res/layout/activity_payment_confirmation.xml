@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context="com.indian11.app.PaymentConfirmationActivity">
+    <include
+        layout="@layout/activity_mainheader"
+        android:id="@+id/head"/>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/head"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="CONFIRMATION"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="20dp"
+        android:textColor="#1e1e1e"
+        android:textStyle="bold"
+        android:textSize="18sp"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:id="@+id/tv_WalletBalance"
+        android:textAlignment="center"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="10dp"
+        android:textColor="#8e8e8e"
+        android:textStyle="bold"
+        android:textSize="14sp"
+        />
+
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="20dp"
+        android:background="@color/eightE"
+        />
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Entry Fee"
+        android:textColor="#1e1e1e"
+        android:textSize="16sp"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="₹ 0"
+        android:id="@+id/tv_ConfirmationEntryFee"
+        android:layout_alignParentRight="true"
+        android:textColor="#1e1e1e"
+        android:textSize="16sp"
+        />
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Usable Cash Bonus"
+        android:textColor="#1e1e1e"
+        android:textSize="16sp"
+        android:drawableTint="@color/gray"
+        android:drawableLeft="@drawable/gift_box_icon"
+
+        android:drawablePadding="5dp"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="- ₹ 0"
+        android:id="@+id/tv_ConfirmationBonus"
+        android:layout_alignParentRight="true"
+        android:textColor="#1e1e1e"
+        android:textSize="16sp"
+        />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="(10% of Entry Fee)"
+            android:layout_below="@+id/tv_ConfirmationBonus"
+            android:layout_marginLeft="55dp"
+            android:textColor="#626262"
+            android:textSize="11sp"
+
+            />
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="20dp"
+        android:background="@color/eightE"
+        />
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="To Pay"
+            android:textStyle="bold"
+
+            android:textColor="@color/colorPrimary"
+            android:textSize="16sp"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="₹ 0"
+            android:textStyle="bold"
+            android:id="@+id/tv_ConfirmationToPay"
+            android:layout_alignParentRight="true"
+            android:textColor="@color/colorPrimary"
+            android:backgroundTint="@color/colorPrimary"
+            android:textSize="16sp"
+            />
+    </RelativeLayout>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_alignParentBottom="true">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:text="@string/by_joining_this"
+        android:textAlignment="center"
+        />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="JOIN CONTEST"
+        android:textAlignment="center"
+        android:gravity="center"
+        android:padding="12dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/dark_rectangle"
+        android:elevation="3dp"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        android:id="@+id/tv_ConfirmationJoinContest"
+        android:layout_marginBottom="10dp"
+        />
+
+    </LinearLayout>
+    </RelativeLayout>
+
+</RelativeLayout>

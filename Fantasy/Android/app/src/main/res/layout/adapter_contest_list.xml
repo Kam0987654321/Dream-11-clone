@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:padding="5dp"
+        android:background="@drawable/white_rectangle"
+        android:id="@+id/RL_ContestListMain"
+        android:elevation="3dp">
+   <LinearLayout
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:orientation="horizontal"
+       android:padding="5dp"
+       android:id="@+id/LL_ContestTop"
+       android:weightSum="3">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:layout_gravity="start"
+        android:gravity="start"
+        android:layout_marginLeft="5dp"
+        android:orientation="vertical">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Total Winnings"
+        android:textColor="@color/sixtwo"
+        android:textSize="12sp"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="₹ 0"
+        android:id="@+id/tv_TotalPrice"
+        android:textSize="13sp"
+        android:textColor="#1e1e1e"
+        android:layout_marginTop="2dp"/>
+    </LinearLayout>
+       <LinearLayout
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:layout_weight="1"
+           android:layout_gravity="center"
+           android:gravity="center"
+           android:orientation="vertical">
+           <TextView
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:text="Winners"
+               android:textColor="@color/sixtwo"
+               android:textSize="12sp"/>
+
+           <TextView
+               android:id="@+id/tv_WinnersCount"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:layout_gravity="center_horizontal"
+               android:layout_marginTop="2dp"
+               android:drawableRight="@drawable/round_keyboard_arrow_down_black_18"
+               android:drawableTint="@color/colorPrimary"
+               android:gravity="center_horizontal"
+               android:text="0"
+               android:textColor="@color/colorPrimary"
+               android:textSize="13sp" />
+       </LinearLayout>
+       <LinearLayout
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:layout_weight="1"
+           android:layout_gravity="end"
+           android:gravity="end"
+           android:layout_marginRight="5dp"
+           android:orientation="vertical">
+           <TextView
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:text="Entry Fee"
+               android:textColor="@color/sixtwo"
+               android:textSize="12sp"/>
+           <TextView
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:text="₹ 0"
+               android:id="@+id/tv_EntryFees"
+               android:textSize="13sp"
+               android:textColor="#1e1e1e"
+               android:layout_marginTop="2dp"/>
+       </LinearLayout>
+   </LinearLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/RL_ProgressBar"
+        android:layout_below="@+id/LL_ContestTop"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="60dp">
+   <ProgressBar
+       android:id="@+id/PB_EntryProgress"
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:indeterminate="false"
+       android:maxHeight="5dp"
+       android:minHeight="5dp"
+       android:progressDrawable="@drawable/contestprogressbar"
+       android:progressBackgroundTint="#dbdbdb"
+       style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+       android:progress="0"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="0 Teams Left"
+        android:textSize="11sp"
+        android:textColor="#1e1e1e"
+        android:id="@+id/tv_TeamLeftCount"
+        android:layout_below="@+id/PB_EntryProgress"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="0 Teams"
+        android:textColor="#1e1e1e"
+        android:id="@+id/tv_TotalTeamCount"
+        android:textSize="11sp"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/PB_EntryProgress"/>
+
+    </RelativeLayout>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="JOIN"
+        android:layout_alignParentRight="true"
+        android:id="@+id/tv_JoinContest"
+        android:background="@drawable/joinbutton_back"
+        android:textColor="@color/colorPrimary"
+        android:textSize="12sp"
+        android:paddingRight="12dp"
+        android:paddingLeft="12dp"
+        android:paddingTop="4dp"
+        android:paddingBottom="4dp"
+        android:layout_marginTop="6dp"
+        android:layout_below="@+id/LL_ContestTop"/>
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#dbdbdb"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="2dp"
+        android:layout_marginRight="5dp"
+        android:layout_marginLeft="5dp"
+        android:layout_below="@+id/RL_ContestListMain"/>
+
+</RelativeLayout>
